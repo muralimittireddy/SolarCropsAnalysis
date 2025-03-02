@@ -1,0 +1,8 @@
+# requests
+pandas
+# pyarrow
+# google-cloud-storage
+sqlalchemy
+aiohttp
+asyncio
+apache-airflow

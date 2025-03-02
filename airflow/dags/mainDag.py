@@ -1,9 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from airflow.scripts.extract import extract_data
-from airflow.scripts.transform import transform_data
-from scripts.load import load_data
+from extract import extract_data
 
 default_args = {
     'owner': 'airflow',
@@ -26,16 +24,16 @@ extract_task = PythonOperator(
     dag=dag
 )
 
-transform_task = PythonOperator(
-    task_id='transform_data',
-    python_callable=transform_data,
-    dag=dag
-)
+# transform_task = PythonOperator(
+#     task_id='transform_data',
+#     python_callable=transform_data,
+#     dag=dag
+# )
 
-load_task = PythonOperator(
-    task_id='load_data',
-    python_callable=load_data,
-    dag=dag
-)
+# load_task = PythonOperator(
+#     task_id='load_data',
+#     python_callable=load_data,
+#     dag=dag
+# )
 
-extract_task >> transform_task >> load_task
+extract_task 
