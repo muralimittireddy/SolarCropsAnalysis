@@ -1,7 +1,7 @@
 # requests
 pandas
-# pyarrow
-# google-cloud-storage
+pyarrow
+google-cloud-storage
 sqlalchemy
 aiohttp
 asyncio

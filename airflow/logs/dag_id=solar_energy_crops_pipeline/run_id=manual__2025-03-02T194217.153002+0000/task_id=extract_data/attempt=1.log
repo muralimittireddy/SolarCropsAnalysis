@@ -1,0 +1,296 @@
+[2025-03-02T19:42:22.940+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-02T19:42:22.962+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-02T19:42:17.153002+00:00 [queued]>
+[2025-03-02T19:42:22.972+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-02T19:42:17.153002+00:00 [queued]>
+[2025-03-02T19:42:22.973+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-02T19:42:22.996+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-02 19:42:17.153002+00:00
+[2025-03-02T19:42:23.003+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=88) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-02T19:42:23.006+0000] {standard_task_runner.py:72} INFO - Started process 90 to run task
+[2025-03-02T19:42:23.013+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'solar_energy_crops_pipeline', 'extract_data', 'manual__2025-03-02T19:42:17.153002+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/mainDag.py', '--cfg-path', '/tmp/tmpckb_esw5']
+[2025-03-02T19:42:23.019+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask extract_data
+[2025-03-02T19:42:23.206+0000] {task_command.py:467} INFO - Running <TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-02T19:42:17.153002+00:00 [running]> on host 8e6d95be62f1
+[2025-03-02T19:42:23.354+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='solar_energy_crops_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T19:42:17.153002+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T19:42:17.153002+00:00'
+[2025-03-02T19:42:23.356+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-02T19:42:23.413+0000] {logging_mixin.py:190} INFO - Extracting data from API...
+[2025-03-02T19:42:23.419+0000] {logging_mixin.py:190} INFO - Fetching data for year 1967
+[2025-03-02T19:42:25.404+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:42:33.413+0000] {logging_mixin.py:190} INFO - Fetching data for year 1968
+[2025-03-02T19:42:34.383+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:42:42.385+0000] {logging_mixin.py:190} INFO - Fetching data for year 1969
+[2025-03-02T19:42:43.311+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:42:51.320+0000] {logging_mixin.py:190} INFO - Fetching data for year 1970
+[2025-03-02T19:42:52.273+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:00.278+0000] {logging_mixin.py:190} INFO - Fetching data for year 1971
+[2025-03-02T19:43:01.235+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:09.246+0000] {logging_mixin.py:190} INFO - Fetching data for year 1972
+[2025-03-02T19:43:10.174+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:18.180+0000] {logging_mixin.py:190} INFO - Fetching data for year 1973
+[2025-03-02T19:43:19.086+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:27.095+0000] {logging_mixin.py:190} INFO - Fetching data for year 1974
+[2025-03-02T19:43:28.462+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:36.466+0000] {logging_mixin.py:190} INFO - Fetching data for year 1975
+[2025-03-02T19:43:37.409+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:45.410+0000] {logging_mixin.py:190} INFO - Fetching data for year 1976
+[2025-03-02T19:43:46.347+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:43:54.357+0000] {logging_mixin.py:190} INFO - Fetching data for year 1977
+[2025-03-02T19:43:55.285+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:03.290+0000] {logging_mixin.py:190} INFO - Fetching data for year 1978
+[2025-03-02T19:44:04.292+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:12.299+0000] {logging_mixin.py:190} INFO - Fetching data for year 1979
+[2025-03-02T19:44:13.377+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:21.384+0000] {logging_mixin.py:190} INFO - Fetching data for year 1980
+[2025-03-02T19:44:22.361+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:30.371+0000] {logging_mixin.py:190} INFO - Fetching data for year 1981
+[2025-03-02T19:44:31.339+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:39.348+0000] {logging_mixin.py:190} INFO - Fetching data for year 1982
+[2025-03-02T19:44:40.489+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:48.488+0000] {logging_mixin.py:190} INFO - Fetching data for year 1983
+[2025-03-02T19:44:49.620+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:44:57.629+0000] {logging_mixin.py:190} INFO - Fetching data for year 1984
+[2025-03-02T19:44:59.099+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:07.102+0000] {logging_mixin.py:190} INFO - Fetching data for year 1985
+[2025-03-02T19:45:08.067+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:16.074+0000] {logging_mixin.py:190} INFO - Fetching data for year 1986
+[2025-03-02T19:45:17.048+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:25.055+0000] {logging_mixin.py:190} INFO - Fetching data for year 1987
+[2025-03-02T19:45:25.965+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:33.975+0000] {logging_mixin.py:190} INFO - Fetching data for year 1988
+[2025-03-02T19:45:34.909+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:42.915+0000] {logging_mixin.py:190} INFO - Fetching data for year 1989
+[2025-03-02T19:45:43.891+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:45:51.893+0000] {logging_mixin.py:190} INFO - Fetching data for year 1990
+[2025-03-02T19:45:52.944+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:00.954+0000] {logging_mixin.py:190} INFO - Fetching data for year 1991
+[2025-03-02T19:46:01.915+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:09.919+0000] {logging_mixin.py:190} INFO - Fetching data for year 1992
+[2025-03-02T19:46:10.896+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:18.904+0000] {logging_mixin.py:190} INFO - Fetching data for year 1993
+[2025-03-02T19:46:19.851+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:27.857+0000] {logging_mixin.py:190} INFO - Fetching data for year 1994
+[2025-03-02T19:46:28.883+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:36.891+0000] {logging_mixin.py:190} INFO - Fetching data for year 1995
+[2025-03-02T19:46:37.850+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:45.856+0000] {logging_mixin.py:190} INFO - Fetching data for year 1996
+[2025-03-02T19:46:46.853+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:46:54.863+0000] {logging_mixin.py:190} INFO - Fetching data for year 1997
+[2025-03-02T19:46:55.778+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:03.787+0000] {logging_mixin.py:190} INFO - Fetching data for year 1998
+[2025-03-02T19:47:04.846+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:12.845+0000] {logging_mixin.py:190} INFO - Fetching data for year 1999
+[2025-03-02T19:47:13.784+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:21.787+0000] {logging_mixin.py:190} INFO - Fetching data for year 2000
+[2025-03-02T19:47:22.717+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:30.720+0000] {logging_mixin.py:190} INFO - Fetching data for year 2001
+[2025-03-02T19:47:31.647+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:39.657+0000] {logging_mixin.py:190} INFO - Fetching data for year 2002
+[2025-03-02T19:47:39.833+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2002: 429
+[2025-03-02T19:47:39.836+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:47.838+0000] {logging_mixin.py:190} INFO - Fetching data for year 2003
+[2025-03-02T19:47:48.010+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2003: 429
+[2025-03-02T19:47:48.011+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:47:56.020+0000] {logging_mixin.py:190} INFO - Fetching data for year 2004
+[2025-03-02T19:47:56.196+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2004: 429
+[2025-03-02T19:47:56.198+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:04.204+0000] {logging_mixin.py:190} INFO - Fetching data for year 2005
+[2025-03-02T19:48:04.379+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2005: 429
+[2025-03-02T19:48:04.383+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:12.383+0000] {logging_mixin.py:190} INFO - Fetching data for year 2006
+[2025-03-02T19:48:12.555+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2006: 429
+[2025-03-02T19:48:12.557+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:20.562+0000] {logging_mixin.py:190} INFO - Fetching data for year 2007
+[2025-03-02T19:48:20.734+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2007: 429
+[2025-03-02T19:48:20.735+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:28.745+0000] {logging_mixin.py:190} INFO - Fetching data for year 2008
+[2025-03-02T19:48:28.916+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2008: 429
+[2025-03-02T19:48:28.918+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:36.922+0000] {logging_mixin.py:190} INFO - Fetching data for year 2009
+[2025-03-02T19:48:37.093+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2009: 429
+[2025-03-02T19:48:37.094+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:45.102+0000] {logging_mixin.py:190} INFO - Fetching data for year 2010
+[2025-03-02T19:48:45.280+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2010: 429
+[2025-03-02T19:48:45.282+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:48:53.290+0000] {logging_mixin.py:190} INFO - Fetching data for year 2011
+[2025-03-02T19:48:53.462+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2011: 429
+[2025-03-02T19:48:53.463+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:01.472+0000] {logging_mixin.py:190} INFO - Fetching data for year 2012
+[2025-03-02T19:49:01.650+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2012: 429
+[2025-03-02T19:49:01.653+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:09.660+0000] {logging_mixin.py:190} INFO - Fetching data for year 2013
+[2025-03-02T19:49:09.837+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2013: 429
+[2025-03-02T19:49:09.840+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:17.848+0000] {logging_mixin.py:190} INFO - Fetching data for year 2014
+[2025-03-02T19:49:18.021+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2014: 429
+[2025-03-02T19:49:18.022+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:26.029+0000] {logging_mixin.py:190} INFO - Fetching data for year 2015
+[2025-03-02T19:49:26.200+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2015: 429
+[2025-03-02T19:49:26.202+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:34.211+0000] {logging_mixin.py:190} INFO - Fetching data for year 2016
+[2025-03-02T19:49:34.382+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2016: 429
+[2025-03-02T19:49:34.386+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:42.388+0000] {logging_mixin.py:190} INFO - Fetching data for year 2017
+[2025-03-02T19:49:42.561+0000] {logging_mixin.py:190} INFO - Failed to fetch data for 2017: 429
+[2025-03-02T19:49:42.563+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-02T19:49:50.750+0000] {logging_mixin.py:190} INFO - Done fetching all years!
+[2025-03-02T19:49:50.755+0000] {logging_mixin.py:190} INFO - Extraction completed
+[2025-03-02T19:49:53.794+0000] {logging_mixin.py:190} INFO - File hourlyData1967.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:53.884+0000] {logging_mixin.py:190} INFO - File dailyData1967.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.159+0000] {logging_mixin.py:190} INFO - File hourlyData1968.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.245+0000] {logging_mixin.py:190} INFO - File dailyData1968.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.480+0000] {logging_mixin.py:190} INFO - File hourlyData1969.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.571+0000] {logging_mixin.py:190} INFO - File dailyData1969.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.837+0000] {logging_mixin.py:190} INFO - File hourlyData1970.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:54.923+0000] {logging_mixin.py:190} INFO - File dailyData1970.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:55.661+0000] {logging_mixin.py:190} INFO - File hourlyData1971.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:55.743+0000] {logging_mixin.py:190} INFO - File dailyData1971.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:55.933+0000] {logging_mixin.py:190} INFO - File hourlyData1972.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.012+0000] {logging_mixin.py:190} INFO - File dailyData1972.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.188+0000] {logging_mixin.py:190} INFO - File hourlyData1973.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.268+0000] {logging_mixin.py:190} INFO - File dailyData1973.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.460+0000] {logging_mixin.py:190} INFO - File hourlyData1974.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.547+0000] {logging_mixin.py:190} INFO - File dailyData1974.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.730+0000] {logging_mixin.py:190} INFO - File hourlyData1975.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.817+0000] {logging_mixin.py:190} INFO - File dailyData1975.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:56.998+0000] {logging_mixin.py:190} INFO - File hourlyData1976.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.088+0000] {logging_mixin.py:190} INFO - File dailyData1976.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.309+0000] {logging_mixin.py:190} INFO - File hourlyData1977.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.389+0000] {logging_mixin.py:190} INFO - File dailyData1977.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.581+0000] {logging_mixin.py:190} INFO - File hourlyData1978.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.660+0000] {logging_mixin.py:190} INFO - File dailyData1978.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.841+0000] {logging_mixin.py:190} INFO - File hourlyData1979.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:57.919+0000] {logging_mixin.py:190} INFO - File dailyData1979.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.013+0000] {logging_mixin.py:190} INFO - File hourlyData1980.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.101+0000] {logging_mixin.py:190} INFO - File dailyData1980.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.362+0000] {logging_mixin.py:190} INFO - File hourlyData1981.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.442+0000] {logging_mixin.py:190} INFO - File dailyData1981.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.759+0000] {logging_mixin.py:190} INFO - File hourlyData1982.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:49:59.840+0000] {logging_mixin.py:190} INFO - File dailyData1982.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.091+0000] {logging_mixin.py:190} INFO - File hourlyData1983.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.167+0000] {logging_mixin.py:190} INFO - File dailyData1983.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.553+0000] {logging_mixin.py:190} INFO - File hourlyData1984.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.634+0000] {logging_mixin.py:190} INFO - File dailyData1984.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.848+0000] {logging_mixin.py:190} INFO - File hourlyData1985.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:00.920+0000] {logging_mixin.py:190} INFO - File dailyData1985.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.178+0000] {logging_mixin.py:190} INFO - File hourlyData1986.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.254+0000] {logging_mixin.py:190} INFO - File dailyData1986.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.436+0000] {logging_mixin.py:190} INFO - File hourlyData1987.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.512+0000] {logging_mixin.py:190} INFO - File dailyData1987.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.706+0000] {logging_mixin.py:190} INFO - File hourlyData1988.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.780+0000] {logging_mixin.py:190} INFO - File dailyData1988.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:01.977+0000] {logging_mixin.py:190} INFO - File hourlyData1989.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.059+0000] {logging_mixin.py:190} INFO - File dailyData1989.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.256+0000] {logging_mixin.py:190} INFO - File hourlyData1990.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.340+0000] {logging_mixin.py:190} INFO - File dailyData1990.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.545+0000] {logging_mixin.py:190} INFO - File hourlyData1991.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.623+0000] {logging_mixin.py:190} INFO - File dailyData1991.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.859+0000] {logging_mixin.py:190} INFO - File hourlyData1992.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:02.943+0000] {logging_mixin.py:190} INFO - File dailyData1992.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.115+0000] {logging_mixin.py:190} INFO - File hourlyData1993.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.199+0000] {logging_mixin.py:190} INFO - File dailyData1993.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.385+0000] {logging_mixin.py:190} INFO - File hourlyData1994.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.467+0000] {logging_mixin.py:190} INFO - File dailyData1994.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.660+0000] {logging_mixin.py:190} INFO - File hourlyData1995.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.743+0000] {logging_mixin.py:190} INFO - File dailyData1995.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:03.945+0000] {logging_mixin.py:190} INFO - File hourlyData1996.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.029+0000] {logging_mixin.py:190} INFO - File dailyData1996.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.221+0000] {logging_mixin.py:190} INFO - File hourlyData1997.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.301+0000] {logging_mixin.py:190} INFO - File dailyData1997.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.476+0000] {logging_mixin.py:190} INFO - File hourlyData1998.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.574+0000] {logging_mixin.py:190} INFO - File dailyData1998.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.782+0000] {logging_mixin.py:190} INFO - File hourlyData1999.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:04.869+0000] {logging_mixin.py:190} INFO - File dailyData1999.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:05.060+0000] {logging_mixin.py:190} INFO - File hourlyData2000.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:05.142+0000] {logging_mixin.py:190} INFO - File dailyData2000.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:05.363+0000] {logging_mixin.py:190} INFO - File hourlyData2001.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:05.445+0000] {logging_mixin.py:190} INFO - File dailyData2001.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-02T19:50:05.509+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/extract.py", line 113, in extract_data
+    hourly_units = entry["hourly_units"]
+                   ~~~~~^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+[2025-03-02T19:50:05.873+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=manual__2025-03-02T19:42:17.153002+00:00, execution_date=20250302T194217, start_date=20250302T194222, end_date=20250302T195005
+[2025-03-02T19:50:06.048+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-02T19:50:06.058+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 11 for task extract_data ('NoneType' object is not subscriptable; 90)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/extract.py", line 113, in extract_data
+    hourly_units = entry["hourly_units"]
+                   ~~~~~^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+[2025-03-02T19:50:06.197+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-02T19:50:06.401+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-02T19:50:06.407+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
