@@ -27,7 +27,7 @@ async def main():
             batch_results = await asyncio.gather(*tasks)  # Runs the tasks for one year
             results.extend(batch_results)
             print("Sleeping for a while to respect API rate limits...")
-            await asyncio.sleep(8)  # Sleep for 60 seconds to respect API rate limits
+            await asyncio.sleep(60)  # Sleep for 60 seconds to respect API rate limits
     return results
 
 async def fetch_data_with_semaphore(session, year, semaphore):
@@ -49,16 +49,6 @@ async def fetch_data(session, year):
         print(f"Error fetching data for {year}: {e}")
         return None
 
-
-# Main function to fetch all years
-# async def main():
-#     async with aiohttp.ClientSession() as session:  # Creates a session for all requests
-#         tasks = [fetch_data(session, year) for year in range(2013, 2014 + 1)]
-#         print("In Asynchronus function")
-#         results = await asyncio.gather(*tasks)  # Runs all tasks at the same time
-#     return results
-
-
 def fetch_all_data():
     """Fetch data from API"""
     # Run the async function
@@ -71,7 +61,7 @@ def save_to_postgres(df,table_name):
     try:
         engine = create_engine(POSTGRES_CONN)
         with engine.connect() as conn:
-            df.to_sql(table_name, con=conn, if_exists="replace", index=False)
+            df.to_sql(table_name, con=conn, if_exists="append", index=False)
         print("Data saved to PostgreSQL table: solar_crops_raw")
     except Exception as e:
         print(f"Error saving data to PostgreSQL: {e}")
@@ -136,12 +126,15 @@ def extract_data():
         save_to_gcs(df_hourly, f"hourlyData{year}")
         save_to_gcs(df_daily, f"dailyData{year}")
 
-    # Combine into single DataFrame
-    df_hourly = pd.concat(df_hourly_list, ignore_index=True)
-    df_daily = pd.concat(df_daily_list, ignore_index=True)
+        save_to_postgres(df_hourly, f"hourlyData")
+        save_to_postgres(df_daily, f"dailyData")
 
-    save_to_postgres(df_hourly,"hourlyData")
-    save_to_postgres(df_daily,"dailyData")
+    # Combine into single DataFrame
+    # df_hourly = pd.concat(df_hourly_list, ignore_index=True)
+    # df_daily = pd.concat(df_daily_list, ignore_index=True)
+
+    # save_to_postgres(df_hourly,"hourlyData")
+    # save_to_postgres(df_daily,"dailyData")
 
     # Display results
     # print("Hourly Data:")

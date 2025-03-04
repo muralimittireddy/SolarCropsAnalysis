@@ -1,0 +1,331 @@
+[2025-03-03T18:41:01.142+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-03T18:41:01.174+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-03T18:40:54.645283+00:00 [queued]>
+[2025-03-03T18:41:01.191+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-03T18:40:54.645283+00:00 [queued]>
+[2025-03-03T18:41:01.192+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-03T18:41:01.212+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-03 18:40:54.645283+00:00
+[2025-03-03T18:41:01.246+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=83) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-03T18:41:01.251+0000] {standard_task_runner.py:72} INFO - Started process 85 to run task
+[2025-03-03T18:41:01.247+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'solar_energy_crops_pipeline', 'extract_data', 'manual__2025-03-03T18:40:54.645283+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/mainDag.py', '--cfg-path', '/tmp/tmpn6ke_3mq']
+[2025-03-03T18:41:01.255+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask extract_data
+[2025-03-03T18:41:01.818+0000] {task_command.py:467} INFO - Running <TaskInstance: solar_energy_crops_pipeline.extract_data manual__2025-03-03T18:40:54.645283+00:00 [running]> on host f3285cc10c7f
+[2025-03-03T18:41:01.952+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='solar_energy_crops_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T18:40:54.645283+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T18:40:54.645283+00:00'
+[2025-03-03T18:41:01.954+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-03T18:41:02.009+0000] {logging_mixin.py:190} INFO - Extracting data from API...
+[2025-03-03T18:41:02.013+0000] {logging_mixin.py:190} INFO - Fetching data for year 1967
+[2025-03-03T18:41:04.499+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:41:54.523+0000] {logging_mixin.py:190} INFO - Fetching data for year 1968
+[2025-03-03T18:41:56.645+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:42:46.679+0000] {logging_mixin.py:190} INFO - Fetching data for year 1969
+[2025-03-03T18:42:48.478+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:43:38.511+0000] {logging_mixin.py:190} INFO - Fetching data for year 1970
+[2025-03-03T18:43:40.916+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:44:30.920+0000] {logging_mixin.py:190} INFO - Fetching data for year 1971
+[2025-03-03T18:44:32.849+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:45:22.882+0000] {logging_mixin.py:190} INFO - Fetching data for year 1972
+[2025-03-03T18:45:24.472+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:46:14.506+0000] {logging_mixin.py:190} INFO - Fetching data for year 1973
+[2025-03-03T18:46:16.072+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:47:06.100+0000] {logging_mixin.py:190} INFO - Fetching data for year 1974
+[2025-03-03T18:47:07.707+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:47:57.739+0000] {logging_mixin.py:190} INFO - Fetching data for year 1975
+[2025-03-03T18:47:59.578+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:48:49.612+0000] {logging_mixin.py:190} INFO - Fetching data for year 1976
+[2025-03-03T18:48:51.145+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:49:41.179+0000] {logging_mixin.py:190} INFO - Fetching data for year 1977
+[2025-03-03T18:49:42.652+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:50:32.683+0000] {logging_mixin.py:190} INFO - Fetching data for year 1978
+[2025-03-03T18:50:34.149+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:51:24.159+0000] {logging_mixin.py:190} INFO - Fetching data for year 1979
+[2025-03-03T18:51:25.617+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T18:52:17.084+0000] {logging_mixin.py:190} INFO - Fetching data for year 1980
+[2025-03-03T18:52:18.916+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:00:53.729+0000] {job.py:229} INFO - Heartbeat recovered after 508.48 seconds
+[2025-03-03T19:01:34.125+0000] {logging_mixin.py:190} INFO - Fetching data for year 1981
+[2025-03-03T19:01:35.983+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:02:26.505+0000] {logging_mixin.py:190} INFO - Fetching data for year 1982
+[2025-03-03T19:02:28.207+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:03:18.312+0000] {logging_mixin.py:190} INFO - Fetching data for year 1983
+[2025-03-03T19:03:20.097+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:04:10.141+0000] {logging_mixin.py:190} INFO - Fetching data for year 1984
+[2025-03-03T19:04:11.791+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:05:01.828+0000] {logging_mixin.py:190} INFO - Fetching data for year 1985
+[2025-03-03T19:05:04.003+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:05:54.029+0000] {logging_mixin.py:190} INFO - Fetching data for year 1986
+[2025-03-03T19:05:55.559+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:08:25.392+0000] {job.py:229} INFO - Heartbeat recovered after 115.07 seconds
+[2025-03-03T19:08:35.611+0000] {logging_mixin.py:190} INFO - Fetching data for year 1987
+[2025-03-03T19:08:37.411+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:09:27.451+0000] {logging_mixin.py:190} INFO - Fetching data for year 1988
+[2025-03-03T19:09:29.163+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:10:19.194+0000] {logging_mixin.py:190} INFO - Fetching data for year 1989
+[2025-03-03T19:10:21.518+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:11:11.553+0000] {logging_mixin.py:190} INFO - Fetching data for year 1990
+[2025-03-03T19:11:13.126+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:12:03.162+0000] {logging_mixin.py:190} INFO - Fetching data for year 1991
+[2025-03-03T19:12:05.063+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:12:55.093+0000] {logging_mixin.py:190} INFO - Fetching data for year 1992
+[2025-03-03T19:12:56.601+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:13:46.608+0000] {logging_mixin.py:190} INFO - Fetching data for year 1993
+[2025-03-03T19:13:48.096+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:14:38.122+0000] {logging_mixin.py:190} INFO - Fetching data for year 1994
+[2025-03-03T19:14:39.563+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:15:29.598+0000] {logging_mixin.py:190} INFO - Fetching data for year 1995
+[2025-03-03T19:15:31.364+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:16:21.393+0000] {logging_mixin.py:190} INFO - Fetching data for year 1996
+[2025-03-03T19:16:22.893+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:17:12.925+0000] {logging_mixin.py:190} INFO - Fetching data for year 1997
+[2025-03-03T19:17:14.351+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:18:04.386+0000] {logging_mixin.py:190} INFO - Fetching data for year 1998
+[2025-03-03T19:18:06.059+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:18:56.092+0000] {logging_mixin.py:190} INFO - Fetching data for year 1999
+[2025-03-03T19:18:57.507+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:19:47.543+0000] {logging_mixin.py:190} INFO - Fetching data for year 2000
+[2025-03-03T19:19:49.011+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:20:39.016+0000] {logging_mixin.py:190} INFO - Fetching data for year 2001
+[2025-03-03T19:20:40.639+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:21:30.658+0000] {logging_mixin.py:190} INFO - Fetching data for year 2002
+[2025-03-03T19:21:32.567+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:22:22.577+0000] {logging_mixin.py:190} INFO - Fetching data for year 2003
+[2025-03-03T19:22:24.572+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:23:14.595+0000] {logging_mixin.py:190} INFO - Fetching data for year 2004
+[2025-03-03T19:23:16.134+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:24:06.156+0000] {logging_mixin.py:190} INFO - Fetching data for year 2005
+[2025-03-03T19:24:07.715+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:24:57.745+0000] {logging_mixin.py:190} INFO - Fetching data for year 2006
+[2025-03-03T19:24:59.183+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:25:49.193+0000] {logging_mixin.py:190} INFO - Fetching data for year 2007
+[2025-03-03T19:25:50.720+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:26:40.754+0000] {logging_mixin.py:190} INFO - Fetching data for year 2008
+[2025-03-03T19:26:42.154+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:27:32.192+0000] {logging_mixin.py:190} INFO - Fetching data for year 2009
+[2025-03-03T19:27:33.641+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:28:23.678+0000] {logging_mixin.py:190} INFO - Fetching data for year 2010
+[2025-03-03T19:28:25.153+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:29:15.185+0000] {logging_mixin.py:190} INFO - Fetching data for year 2011
+[2025-03-03T19:29:16.682+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:30:06.720+0000] {logging_mixin.py:190} INFO - Fetching data for year 2012
+[2025-03-03T19:30:08.301+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:30:58.332+0000] {logging_mixin.py:190} INFO - Fetching data for year 2013
+[2025-03-03T19:30:59.877+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:31:49.899+0000] {logging_mixin.py:190} INFO - Fetching data for year 2014
+[2025-03-03T19:31:51.317+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:32:41.348+0000] {logging_mixin.py:190} INFO - Fetching data for year 2015
+[2025-03-03T19:32:42.783+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:33:32.786+0000] {logging_mixin.py:190} INFO - Fetching data for year 2016
+[2025-03-03T19:33:34.299+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:34:24.335+0000] {logging_mixin.py:190} INFO - Fetching data for year 2017
+[2025-03-03T19:34:26.267+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-03T19:35:16.428+0000] {logging_mixin.py:190} INFO - Done fetching all years!
+[2025-03-03T19:35:16.432+0000] {logging_mixin.py:190} INFO - Extraction completed
+[2025-03-03T19:35:18.647+0000] {logging_mixin.py:190} INFO - File hourlyData1967.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:18.743+0000] {logging_mixin.py:190} INFO - File dailyData1967.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:22.286+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:22.339+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:22.609+0000] {logging_mixin.py:190} INFO - File hourlyData1968.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:22.701+0000] {logging_mixin.py:190} INFO - File dailyData1968.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:23.890+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:23.953+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:24.132+0000] {logging_mixin.py:190} INFO - File hourlyData1969.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:24.233+0000] {logging_mixin.py:190} INFO - File dailyData1969.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:25.273+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:25.335+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:25.504+0000] {logging_mixin.py:190} INFO - File hourlyData1970.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:25.601+0000] {logging_mixin.py:190} INFO - File dailyData1970.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:31.210+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:31.268+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:31.427+0000] {logging_mixin.py:190} INFO - File hourlyData1971.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:31.522+0000] {logging_mixin.py:190} INFO - File dailyData1971.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:32.570+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:32.631+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:32.791+0000] {logging_mixin.py:190} INFO - File hourlyData1972.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:32.881+0000] {logging_mixin.py:190} INFO - File dailyData1972.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:33.952+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:34.012+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:34.167+0000] {logging_mixin.py:190} INFO - File hourlyData1973.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:34.255+0000] {logging_mixin.py:190} INFO - File dailyData1973.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:35.310+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:35.371+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:35.544+0000] {logging_mixin.py:190} INFO - File hourlyData1974.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:35.628+0000] {logging_mixin.py:190} INFO - File dailyData1974.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:36.624+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:36.701+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:36.867+0000] {logging_mixin.py:190} INFO - File hourlyData1975.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:36.954+0000] {logging_mixin.py:190} INFO - File dailyData1975.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:38.167+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:38.228+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:38.385+0000] {logging_mixin.py:190} INFO - File hourlyData1976.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:38.480+0000] {logging_mixin.py:190} INFO - File dailyData1976.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:39.665+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:39.723+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:39.878+0000] {logging_mixin.py:190} INFO - File hourlyData1977.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:39.967+0000] {logging_mixin.py:190} INFO - File dailyData1977.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:40.965+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:41.022+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:41.216+0000] {logging_mixin.py:190} INFO - File hourlyData1978.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:41.298+0000] {logging_mixin.py:190} INFO - File dailyData1978.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:42.430+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:42.490+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:42.644+0000] {logging_mixin.py:190} INFO - File hourlyData1979.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:42.728+0000] {logging_mixin.py:190} INFO - File dailyData1979.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:43.841+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:43.895+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:44.046+0000] {logging_mixin.py:190} INFO - File hourlyData1980.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:44.136+0000] {logging_mixin.py:190} INFO - File dailyData1980.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:45.163+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:45.225+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:45.385+0000] {logging_mixin.py:190} INFO - File hourlyData1981.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:45.479+0000] {logging_mixin.py:190} INFO - File dailyData1981.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:46.672+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:46.738+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:46.900+0000] {logging_mixin.py:190} INFO - File hourlyData1982.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:46.979+0000] {logging_mixin.py:190} INFO - File dailyData1982.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:48.067+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:48.127+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:48.282+0000] {logging_mixin.py:190} INFO - File hourlyData1983.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:48.368+0000] {logging_mixin.py:190} INFO - File dailyData1983.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:49.665+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:49.722+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:49.886+0000] {logging_mixin.py:190} INFO - File hourlyData1984.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:49.972+0000] {logging_mixin.py:190} INFO - File dailyData1984.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:50.989+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:51.052+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:51.229+0000] {logging_mixin.py:190} INFO - File hourlyData1985.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:51.316+0000] {logging_mixin.py:190} INFO - File dailyData1985.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:52.327+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:52.383+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:52.534+0000] {logging_mixin.py:190} INFO - File hourlyData1986.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:52.620+0000] {logging_mixin.py:190} INFO - File dailyData1986.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:53.937+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:54.000+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:54.155+0000] {logging_mixin.py:190} INFO - File hourlyData1987.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:54.237+0000] {logging_mixin.py:190} INFO - File dailyData1987.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:55.429+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:55.484+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:55.640+0000] {logging_mixin.py:190} INFO - File hourlyData1988.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:55.721+0000] {logging_mixin.py:190} INFO - File dailyData1988.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:56.913+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:56.980+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:57.140+0000] {logging_mixin.py:190} INFO - File hourlyData1989.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:57.220+0000] {logging_mixin.py:190} INFO - File dailyData1989.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:58.439+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:58.491+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:35:58.649+0000] {logging_mixin.py:190} INFO - File hourlyData1990.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:58.736+0000] {logging_mixin.py:190} INFO - File dailyData1990.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:35:59.961+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:00.024+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:00.181+0000] {logging_mixin.py:190} INFO - File hourlyData1991.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:00.268+0000] {logging_mixin.py:190} INFO - File dailyData1991.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:02.488+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:03.040+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:03.223+0000] {logging_mixin.py:190} INFO - File hourlyData1992.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:03.313+0000] {logging_mixin.py:190} INFO - File dailyData1992.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:04.335+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:04.390+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:04.549+0000] {logging_mixin.py:190} INFO - File hourlyData1993.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:04.639+0000] {logging_mixin.py:190} INFO - File dailyData1993.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:05.657+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:05.718+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:05.873+0000] {logging_mixin.py:190} INFO - File hourlyData1994.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:05.962+0000] {logging_mixin.py:190} INFO - File dailyData1994.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:06.972+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:07.032+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:07.181+0000] {logging_mixin.py:190} INFO - File hourlyData1995.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:07.271+0000] {logging_mixin.py:190} INFO - File dailyData1995.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:08.294+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:08.353+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:08.500+0000] {logging_mixin.py:190} INFO - File hourlyData1996.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:08.580+0000] {logging_mixin.py:190} INFO - File dailyData1996.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:09.687+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:09.742+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:09.898+0000] {logging_mixin.py:190} INFO - File hourlyData1997.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:09.985+0000] {logging_mixin.py:190} INFO - File dailyData1997.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:11.136+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:11.192+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:11.345+0000] {logging_mixin.py:190} INFO - File hourlyData1998.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:11.431+0000] {logging_mixin.py:190} INFO - File dailyData1998.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:12.446+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:12.504+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:12.653+0000] {logging_mixin.py:190} INFO - File hourlyData1999.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:12.737+0000] {logging_mixin.py:190} INFO - File dailyData1999.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:13.737+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:13.798+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:13.945+0000] {logging_mixin.py:190} INFO - File hourlyData2000.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:14.034+0000] {logging_mixin.py:190} INFO - File dailyData2000.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:15.059+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:15.117+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:15.260+0000] {logging_mixin.py:190} INFO - File hourlyData2001.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:15.348+0000] {logging_mixin.py:190} INFO - File dailyData2001.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:16.401+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:16.457+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:16.599+0000] {logging_mixin.py:190} INFO - File hourlyData2002.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:16.684+0000] {logging_mixin.py:190} INFO - File dailyData2002.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:17.726+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:17.784+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:17.931+0000] {logging_mixin.py:190} INFO - File hourlyData2003.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:18.016+0000] {logging_mixin.py:190} INFO - File dailyData2003.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:19.382+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:19.441+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:19.609+0000] {logging_mixin.py:190} INFO - File hourlyData2004.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:19.695+0000] {logging_mixin.py:190} INFO - File dailyData2004.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:20.815+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:20.883+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:21.061+0000] {logging_mixin.py:190} INFO - File hourlyData2005.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:21.140+0000] {logging_mixin.py:190} INFO - File dailyData2005.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:22.319+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:22.418+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:22.570+0000] {logging_mixin.py:190} INFO - File hourlyData2006.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:22.659+0000] {logging_mixin.py:190} INFO - File dailyData2006.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:23.721+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:23.786+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:23.936+0000] {logging_mixin.py:190} INFO - File hourlyData2007.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:24.018+0000] {logging_mixin.py:190} INFO - File dailyData2007.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:25.014+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:25.072+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:25.222+0000] {logging_mixin.py:190} INFO - File hourlyData2008.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:25.306+0000] {logging_mixin.py:190} INFO - File dailyData2008.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:26.510+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:26.568+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:26.710+0000] {logging_mixin.py:190} INFO - File hourlyData2009.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:26.794+0000] {logging_mixin.py:190} INFO - File dailyData2009.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:27.792+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:27.850+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:27.997+0000] {logging_mixin.py:190} INFO - File hourlyData2010.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:28.085+0000] {logging_mixin.py:190} INFO - File dailyData2010.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:29.142+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:29.204+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:29.358+0000] {logging_mixin.py:190} INFO - File hourlyData2011.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:29.441+0000] {logging_mixin.py:190} INFO - File dailyData2011.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:30.634+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:30.696+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:30.882+0000] {logging_mixin.py:190} INFO - File hourlyData2012.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:30.965+0000] {logging_mixin.py:190} INFO - File dailyData2012.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:32.119+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:32.192+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:32.451+0000] {logging_mixin.py:190} INFO - File hourlyData2013.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:32.536+0000] {logging_mixin.py:190} INFO - File dailyData2013.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:33.691+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:33.778+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:34.039+0000] {logging_mixin.py:190} INFO - File hourlyData2014.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:34.137+0000] {logging_mixin.py:190} INFO - File dailyData2014.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:35.384+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:35.442+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:35.587+0000] {logging_mixin.py:190} INFO - File hourlyData2015.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:35.675+0000] {logging_mixin.py:190} INFO - File dailyData2015.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:36.687+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:36.752+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:36.892+0000] {logging_mixin.py:190} INFO - File hourlyData2016.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:36.980+0000] {logging_mixin.py:190} INFO - File dailyData2016.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:37.988+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:38.046+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:38.196+0000] {logging_mixin.py:190} INFO - File hourlyData2017.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:38.284+0000] {logging_mixin.py:190} INFO - File dailyData2017.parquet uploaded to GCS bucket solar-crops-analysis-gcs-bucket
+[2025-03-03T19:36:39.371+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:39.428+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-03T19:36:39.601+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-03T19:36:39.618+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-03T19:36:39.619+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=manual__2025-03-03T18:40:54.645283+00:00, execution_date=20250303T184054, start_date=20250303T184101, end_date=20250303T193639
+[2025-03-03T19:36:39.704+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-03T19:36:39.822+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-03T19:36:39.827+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
