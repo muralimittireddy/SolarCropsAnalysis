@@ -6,10 +6,14 @@ x-airflow-common:
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
   # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.10.4}
-  build: .
+  build:
+    context: .  # Set the build context to the parent directory
+    dockerfile: docker/airflow.dockerfile  # Specify the path to the Dockerfile
+
   environment:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+    AIRFLOW_CONN_SPARK_DEFAULT: spark://spark-master:7077
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
@@ -34,6 +38,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR}/plugins:/opt/airflow/plugins
+    - ${jobs_dir}/jobs:/opt/airflow/jobs
     - C:/Users/murali/gcp_keys/gcs_key.json:/opt/airflow/service-account.json
     # - ${AIRFLOW_PROJ_DIR:-.}/requirements.txt:/opt/airflow/requirements.txt
   user: "${AIRFLOW_UID:-50000}:0"
@@ -43,6 +48,15 @@ x-airflow-common:
       condition: service_healthy
     postgres:
       condition: service_healthy
+  networks:
+    - spark-network
+
+x-spark-image:
+  &spark-image
+  #image: ${SPARK_IMAGE_NAME:-docker.io/bitnami/spark:3.5.1}
+  build:
+    context: ./docker
+    dockerfile: spark.dockerfile
 
 services:
   postgres:
@@ -59,6 +73,8 @@ services:
       retries: 5
       start_period: 5s
     restart: always
+    networks:
+      - spark-network
   
     # Application database (PostgreSQL)
   postgres_app:
@@ -70,9 +86,11 @@ services:
       POSTGRES_PASSWORD: app_password
       POSTGRES_DB: app_db
     ports:
-      - "5434:5432"  # Exposing on a different port
+      - "5435:5432"  # Exposing on a different port
     volumes:
       - postgres_app_data:/var/lib/postgresql/data
+    networks:
+      - spark-network
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -87,6 +105,8 @@ services:
       retries: 50
       start_period: 30s
     restart: always
+    networks:
+      - spark-network
 
   airflow-webserver:
     <<: *airflow-common
@@ -104,10 +124,17 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - spark-network
 
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
+    deploy:
+      resources:
+        limits:
+          cpus: '2'  # Limit to 2 CPU cores
+          memory: 2G  # Limit to 2GB of memory
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -119,10 +146,21 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+      spark-master:
+        condition: service_healthy
+      spark-worker-1:
+        condition: service_healthy
+    networks:
+      - spark-network
 
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    deploy:
+      resources:
+        limits:
+          cpus: '1'  # Limit to 2 CPU cores
+          memory: 2G  # Limit to 2GB of memory
     healthcheck:
       # yamllint disable rule:line-length
       test:
@@ -142,6 +180,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - spark-network
 
 
   airflow-init:
@@ -170,6 +210,60 @@ services:
       - bash
       - -c
       - airflow
+
+  spark-master:
+    <<: *spark-image
+    command: bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_MODE=master
+    
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080"]  # Check if the master UI is accessible
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+    ports:
+      - "8082:8080"  # Spark Master Web UI
+      - "7077:7077"  # Spark Master communication port
+    volumes:
+      - ./jobs:/opt/jobs
+    networks:
+      - spark-network
+
+  spark-worker-1:
+    <<: *spark-image
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_CORES=2
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    depends_on:
+      - spark-master
+    
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8081"]  # Check if the worker UI is accessible
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+    ports:
+      - "8081:8081"  # Spark Worker Web UI
+    volumes:
+      - ./jobs:/opt/jobs
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
 
 volumes:
   postgres-db-volume:

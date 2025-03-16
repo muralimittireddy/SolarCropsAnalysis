@@ -6,3 +6,4 @@ sqlalchemy
 aiohttp
 asyncio
 apache-airflow
+apache-airflow-providers-apache-spark

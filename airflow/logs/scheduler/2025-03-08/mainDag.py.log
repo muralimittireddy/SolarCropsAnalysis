@@ -1,0 +1,495 @@
+[2025-03-08T17:21:56.851+0000] {processor.py:186} INFO - Started process (PID=65) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:21:56.852+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:21:56.858+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:21:56.857+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:22:05.976+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:22:06.054+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:22:06.053+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:22:06.143+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:22:06.143+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:22:06.179+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 9.341 seconds
+[2025-03-08T17:22:36.352+0000] {processor.py:186} INFO - Started process (PID=73) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:22:36.356+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:22:36.370+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:22:36.369+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:22:39.455+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:22:39.488+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:22:39.488+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:22:39.507+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:22:39.507+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:22:39.531+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 3.192 seconds
+[2025-03-08T17:23:09.760+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:09.761+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:23:09.766+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:09.765+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:10.673+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:10.708+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:10.707+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:23:10.735+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:10.734+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:23:10.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.127 seconds
+[2025-03-08T17:23:41.151+0000] {processor.py:186} INFO - Started process (PID=89) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:41.152+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:23:41.158+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:41.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:41.858+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:23:41.884+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:41.884+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:23:41.909+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:23:41.909+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:23:41.934+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.789 seconds
+[2025-03-08T17:24:12.274+0000] {processor.py:186} INFO - Started process (PID=97) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:12.276+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:24:12.278+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:12.278+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:13.068+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:13.096+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:13.095+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:24:13.122+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:13.122+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:24:13.150+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.883 seconds
+[2025-03-08T17:24:43.518+0000] {processor.py:186} INFO - Started process (PID=105) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:43.520+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:24:43.525+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:43.524+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:44.207+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:24:44.229+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:44.229+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:24:44.248+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:24:44.248+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:24:44.270+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.761 seconds
+[2025-03-08T17:25:14.627+0000] {processor.py:186} INFO - Started process (PID=113) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:14.629+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:25:14.631+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:14.631+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:15.567+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:15.591+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:15.591+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:25:15.613+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:15.613+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:25:15.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.020 seconds
+[2025-03-08T17:25:45.940+0000] {processor.py:186} INFO - Started process (PID=121) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:45.942+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:25:45.947+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:45.946+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:46.751+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:25:46.786+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:46.785+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:25:46.816+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:25:46.816+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:25:46.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.914 seconds
+[2025-03-08T17:26:17.243+0000] {processor.py:186} INFO - Started process (PID=129) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:17.244+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:26:17.246+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:17.246+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:18.045+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:18.074+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:18.073+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:26:18.095+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:18.095+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:26:18.118+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.881 seconds
+[2025-03-08T17:26:48.463+0000] {processor.py:186} INFO - Started process (PID=137) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:48.464+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:26:48.467+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:48.466+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:49.199+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:26:49.228+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:49.227+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:26:49.250+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:26:49.249+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:26:49.274+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.818 seconds
+[2025-03-08T17:27:19.660+0000] {processor.py:186} INFO - Started process (PID=145) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:19.661+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:27:19.664+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:19.664+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:20.330+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:20.358+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:20.358+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:27:20.378+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:20.378+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:27:20.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.750 seconds
+[2025-03-08T17:27:50.779+0000] {processor.py:186} INFO - Started process (PID=153) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:50.781+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:27:50.784+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:50.784+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:51.442+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:27:51.467+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:51.467+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:27:51.491+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:27:51.490+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:27:51.516+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.743 seconds
+[2025-03-08T17:28:21.930+0000] {processor.py:186} INFO - Started process (PID=161) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:21.931+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:28:21.934+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:21.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:22.605+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:22.637+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:22.637+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:28:22.657+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:22.656+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:28:22.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.756 seconds
+[2025-03-08T17:28:52.893+0000] {processor.py:186} INFO - Started process (PID=169) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:52.894+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:28:52.897+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:52.897+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:53.625+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:28:53.654+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:53.654+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:28:53.680+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:28:53.680+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:28:53.706+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.822 seconds
+[2025-03-08T17:29:24.097+0000] {processor.py:186} INFO - Started process (PID=177) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:24.100+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:29:24.102+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:24.102+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:24.791+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:24.815+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:24.815+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:29:24.836+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:24.836+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:29:24.857+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.772 seconds
+[2025-03-08T17:29:55.285+0000] {processor.py:186} INFO - Started process (PID=185) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:55.286+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:29:55.289+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:55.289+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:55.929+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:29:55.964+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:55.964+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:29:55.993+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:29:55.993+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:29:56.019+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.742 seconds
+[2025-03-08T17:30:26.413+0000] {processor.py:186} INFO - Started process (PID=193) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:26.414+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:30:26.417+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:26.417+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:27.043+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:27.068+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:27.067+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:30:27.088+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:27.088+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:30:27.111+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.704 seconds
+[2025-03-08T17:30:57.437+0000] {processor.py:186} INFO - Started process (PID=201) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:57.439+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:30:57.441+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:57.441+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:58.096+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:30:58.118+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:58.118+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:30:58.137+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:30:58.137+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:30:58.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.732 seconds
+[2025-03-08T17:31:28.579+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:31:28.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:31:28.586+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:31:28.585+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:31:29.280+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:31:29.303+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:31:29.303+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:31:29.334+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:31:29.334+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:31:29.733+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.162 seconds
+[2025-03-08T17:32:00.019+0000] {processor.py:186} INFO - Started process (PID=224) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:00.020+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:32:00.025+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:00.024+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:00.850+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:00.875+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:00.874+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:32:00.902+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:00.901+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:32:00.923+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.913 seconds
+[2025-03-08T17:32:31.354+0000] {processor.py:186} INFO - Started process (PID=232) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:31.355+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:32:31.358+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:31.357+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:31.981+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:32:32.004+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:32.004+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:32:32.025+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:32:32.025+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:32:32.048+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.700 seconds
+[2025-03-08T17:33:02.452+0000] {processor.py:186} INFO - Started process (PID=240) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:02.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:33:02.459+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:02.458+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:03.117+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:03.140+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:03.140+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:33:03.161+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:03.161+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:33:03.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.746 seconds
+[2025-03-08T17:33:33.627+0000] {processor.py:186} INFO - Started process (PID=248) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:33.628+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:33:33.632+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:33.631+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:34.392+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:33:34.418+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:34.418+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:33:34.440+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:33:34.440+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:33:34.462+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.846 seconds
+[2025-03-08T17:34:04.868+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:04.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:34:04.876+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:04.875+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:05.542+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:05.571+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:05.571+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:34:05.593+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:05.592+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:34:05.622+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.759 seconds
+[2025-03-08T17:34:35.698+0000] {processor.py:186} INFO - Started process (PID=265) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:35.699+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:34:35.703+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:35.702+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:36.337+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:34:36.358+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:36.358+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:34:36.378+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:34:36.377+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:34:36.401+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.709 seconds
+[2025-03-08T17:35:06.813+0000] {processor.py:186} INFO - Started process (PID=273) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:06.814+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:35:06.816+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:06.816+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:07.441+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:07.463+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:07.463+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:35:07.483+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:07.482+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:35:07.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.700 seconds
+[2025-03-08T17:35:37.703+0000] {processor.py:186} INFO - Started process (PID=281) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:37.704+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:35:37.706+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:37.706+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:38.316+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:35:38.339+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:38.339+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:35:38.358+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:35:38.358+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:35:38.382+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.685 seconds
+[2025-03-08T17:36:08.752+0000] {processor.py:186} INFO - Started process (PID=289) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:08.753+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:36:08.756+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:08.756+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:09.486+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:09.513+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:09.513+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:36:09.535+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:09.535+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:36:09.559+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.813 seconds
+[2025-03-08T17:36:39.928+0000] {processor.py:186} INFO - Started process (PID=297) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:39.929+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:36:39.931+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:39.931+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:40.536+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:36:40.559+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:40.559+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:36:40.581+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:36:40.581+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:36:40.604+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.682 seconds
+[2025-03-08T17:37:10.944+0000] {processor.py:186} INFO - Started process (PID=306) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:10.946+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:37:10.948+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:10.948+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:11.599+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:11.623+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:11.622+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:37:11.642+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:11.642+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:37:11.665+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.726 seconds
+[2025-03-08T17:37:42.077+0000] {processor.py:186} INFO - Started process (PID=314) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:42.078+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:37:42.083+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:42.083+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:42.674+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:37:42.697+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:42.697+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:37:42.716+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:37:42.716+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:37:42.741+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.669 seconds
+[2025-03-08T17:38:13.179+0000] {processor.py:186} INFO - Started process (PID=322) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:13.180+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:38:13.183+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:13.183+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:13.801+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:13.825+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:13.825+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:38:13.847+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:13.847+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:38:13.872+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.699 seconds
+[2025-03-08T17:38:43.971+0000] {processor.py:186} INFO - Started process (PID=330) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:43.973+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:38:43.976+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:43.975+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:44.674+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:38:44.714+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:44.713+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:38:44.756+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:38:44.756+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:38:44.782+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.817 seconds
+[2025-03-08T17:39:15.197+0000] {processor.py:186} INFO - Started process (PID=338) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:15.198+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:39:15.201+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:15.201+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:16.336+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:16.362+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:16.361+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:39:16.381+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:16.380+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:39:16.403+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.213 seconds
+[2025-03-08T17:39:46.588+0000] {processor.py:186} INFO - Started process (PID=346) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:46.589+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:39:46.594+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:46.593+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:47.351+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:39:47.376+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:47.375+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:39:47.396+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:39:47.396+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:39:47.419+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.838 seconds
+[2025-03-08T17:40:17.814+0000] {processor.py:186} INFO - Started process (PID=354) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:17.815+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:40:17.817+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:17.817+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:18.493+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:18.516+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:18.516+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:40:18.543+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:18.542+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:40:18.564+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.757 seconds
+[2025-03-08T17:40:48.948+0000] {processor.py:186} INFO - Started process (PID=362) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:48.949+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:40:48.952+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:48.952+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:49.654+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:40:49.679+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:49.678+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:40:49.700+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:40:49.700+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:40:49.723+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.780 seconds
+[2025-03-08T17:41:19.846+0000] {processor.py:186} INFO - Started process (PID=370) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:19.848+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:41:19.851+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:19.850+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:20.458+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:20.479+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:20.479+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:41:20.503+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:20.503+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:41:20.527+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.686 seconds
+[2025-03-08T17:41:50.906+0000] {processor.py:186} INFO - Started process (PID=378) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:50.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:41:50.911+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:50.911+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:51.552+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:41:51.585+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:51.584+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:41:51.605+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:41:51.604+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:41:51.627+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.726 seconds
+[2025-03-08T17:42:21.904+0000] {processor.py:186} INFO - Started process (PID=386) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:21.906+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:42:21.908+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:21.908+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:22.586+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:22.623+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:22.622+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:42:22.643+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:22.643+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:42:22.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.769 seconds
+[2025-03-08T17:42:53.129+0000] {processor.py:186} INFO - Started process (PID=394) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:53.131+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:42:53.134+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:53.133+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:53.766+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:42:53.798+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:53.798+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:42:53.827+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:42:53.827+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:42:53.857+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.737 seconds
+[2025-03-08T17:43:24.272+0000] {processor.py:186} INFO - Started process (PID=402) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:24.273+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:43:24.276+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:24.275+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:24.937+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:24.961+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:24.960+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:43:24.980+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:24.980+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:43:25.005+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.757 seconds
+[2025-03-08T17:43:55.369+0000] {processor.py:186} INFO - Started process (PID=410) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:55.371+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T17:43:55.374+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:55.373+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:56.120+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T17:43:56.156+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:56.156+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T17:43:56.187+0000] {logging_mixin.py:190} INFO - [2025-03-08T17:43:56.187+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T17:43:56.212+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.851 seconds
+[2025-03-08T20:09:21.239+0000] {processor.py:186} INFO - Started process (PID=58) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:21.278+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:09:21.332+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:21.329+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:32.066+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:32.129+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:32.129+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:09:32.163+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:32.163+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:09:32.187+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 11.206 seconds
+[2025-03-08T20:09:39.669+0000] {processor.py:186} INFO - Started process (PID=67) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:39.672+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:09:39.682+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:39.681+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:41.890+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:09:41.916+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:41.916+0000] {taskinstance.py:3313} ERROR - {'DAG Id': 'solar_energy_crops_pipeline', 'Task Id': 'extract_data', 'Run Id': 'scheduled__2025-03-04T00:00:00+00:00', 'Hostname': '9662aa6e8776', 'External Executor Id': '7c167e01-c9f0-4de7-b1e7-41fc4cec8461'}
+[2025-03-08T20:09:41.953+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:41.953+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-04T00:00:00+00:00, execution_date=20250304T000000, start_date=20250308T172206, end_date=20250308T200941
+[2025-03-08T20:09:41.983+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:41.983+0000] {processor.py:876} INFO - Executed callback for <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-04T00:00:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-03-08T20:09:41.987+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:41.987+0000] {taskinstance.py:3313} ERROR - {'DAG Id': 'solar_energy_crops_pipeline', 'Task Id': 'extract_data', 'Run Id': 'scheduled__2025-03-07T00:00:00+00:00', 'Hostname': '9662aa6e8776', 'External Executor Id': '1c87b3ba-a933-4080-8874-6202a17a6f89'}
+[2025-03-08T20:09:42.000+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.000+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-07T00:00:00+00:00, execution_date=20250307T000000, start_date=20250308T172207, end_date=20250308T200942
+[2025-03-08T20:09:42.010+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.010+0000] {processor.py:876} INFO - Executed callback for <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-07T00:00:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-03-08T20:09:42.014+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.014+0000] {taskinstance.py:3313} ERROR - {'DAG Id': 'solar_energy_crops_pipeline', 'Task Id': 'extract_data', 'Run Id': 'scheduled__2025-03-04T00:00:00+00:00', 'Hostname': '9662aa6e8776', 'External Executor Id': '7c167e01-c9f0-4de7-b1e7-41fc4cec8461'}
+[2025-03-08T20:09:42.024+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.024+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-04T00:00:00+00:00, execution_date=20250304T000000, start_date=20250308T172206, end_date=20250308T200942
+[2025-03-08T20:09:42.033+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.033+0000] {processor.py:876} INFO - Executed callback for <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-04T00:00:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-03-08T20:09:42.052+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.052+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:09:42.074+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:09:42.073+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:09:42.096+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 2.435 seconds
+[2025-03-08T20:10:12.625+0000] {processor.py:186} INFO - Started process (PID=75) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:12.626+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:10:12.629+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:12.629+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:13.921+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:13.944+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:13.943+0000] {taskinstance.py:3313} ERROR - {'DAG Id': 'solar_energy_crops_pipeline', 'Task Id': 'extract_data', 'Run Id': 'scheduled__2025-03-07T00:00:00+00:00', 'Hostname': '9662aa6e8776', 'External Executor Id': '1c87b3ba-a933-4080-8874-6202a17a6f89'}
+[2025-03-08T20:10:13.974+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:13.974+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-07T00:00:00+00:00, execution_date=20250307T000000, start_date=20250308T172207, end_date=20250308T201013
+[2025-03-08T20:10:13.988+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:13.988+0000] {processor.py:876} INFO - Executed callback for <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-07T00:00:00+00:00 [up_for_retry]> in state up_for_retry
+[2025-03-08T20:10:14.006+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:14.006+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:10:14.028+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:14.028+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:10:14.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.432 seconds
+[2025-03-08T20:10:44.481+0000] {processor.py:186} INFO - Started process (PID=83) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:44.482+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:10:44.485+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:44.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:45.290+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:10:45.316+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:45.315+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:10:45.337+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:10:45.337+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:10:45.359+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.885 seconds
+[2025-03-08T20:11:15.722+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:15.723+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:11:15.727+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:15.727+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:16.554+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:16.583+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:16.582+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:11:16.604+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:16.604+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:11:16.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.908 seconds
+[2025-03-08T20:11:47.040+0000] {processor.py:186} INFO - Started process (PID=99) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:47.042+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:11:47.047+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:47.046+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:47.902+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:11:47.927+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:47.926+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:11:47.947+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:11:47.947+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:11:47.972+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.944 seconds
+[2025-03-08T20:12:18.303+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:18.304+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:12:18.308+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:18.308+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:18.927+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:18.950+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:18.950+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:12:18.974+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:18.974+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:12:19.000+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.705 seconds
+[2025-03-08T20:12:49.271+0000] {processor.py:186} INFO - Started process (PID=115) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:49.273+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:12:49.276+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:49.275+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:49.899+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:12:49.923+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:49.922+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:12:49.942+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:12:49.942+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:12:49.966+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.700 seconds
+[2025-03-08T20:13:20.370+0000] {processor.py:186} INFO - Started process (PID=123) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:20.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:13:20.376+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:20.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:21.000+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:21.024+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:21.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:13:21.045+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:21.045+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:13:21.068+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.707 seconds
+[2025-03-08T20:13:51.481+0000] {processor.py:186} INFO - Started process (PID=131) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:51.483+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:13:51.486+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:51.486+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:52.126+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:13:52.150+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:52.149+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:13:52.171+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:13:52.171+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:13:52.195+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.732 seconds
+[2025-03-08T20:14:22.312+0000] {processor.py:186} INFO - Started process (PID=139) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:22.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:14:22.317+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:22.316+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:23.121+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:23.149+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:23.149+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:14:23.171+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:23.171+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:14:23.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.895 seconds
+[2025-03-08T20:14:53.503+0000] {processor.py:186} INFO - Started process (PID=153) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:53.505+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:14:53.508+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:53.508+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:54.351+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:14:54.378+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:54.378+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:14:54.401+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:14:54.401+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:14:54.426+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.930 seconds
+[2025-03-08T20:15:24.931+0000] {processor.py:186} INFO - Started process (PID=161) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:24.933+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:15:24.940+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:24.937+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:27.350+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:27.400+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:27.400+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:15:27.436+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:27.435+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:15:27.468+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 2.580 seconds
+[2025-03-08T20:15:57.791+0000] {processor.py:186} INFO - Started process (PID=169) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:57.792+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:15:57.795+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:57.795+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:58.922+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:15:58.958+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:58.957+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:15:58.989+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:15:58.988+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:15:59.015+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 1.230 seconds
+[2025-03-08T20:16:29.347+0000] {processor.py:186} INFO - Started process (PID=177) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:16:29.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:16:29.352+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:16:29.352+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:16:30.022+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:16:30.046+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:16:30.046+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:16:30.070+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:16:30.070+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:16:30.097+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.759 seconds
+[2025-03-08T20:17:00.400+0000] {processor.py:186} INFO - Started process (PID=185) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:00.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:17:00.404+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:00.404+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:01.023+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:01.045+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:01.045+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:17:01.064+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:01.064+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:17:01.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.693 seconds
+[2025-03-08T20:17:31.474+0000] {processor.py:186} INFO - Started process (PID=193) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:31.475+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:17:31.478+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:31.477+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:32.129+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:17:32.154+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:32.153+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:17:32.175+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:17:32.174+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:17:32.201+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.733 seconds
+[2025-03-08T20:18:02.581+0000] {processor.py:186} INFO - Started process (PID=201) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:02.582+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:18:02.584+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:02.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:03.197+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:03.220+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:03.220+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:18:03.242+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:03.241+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:18:03.265+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.690 seconds
+[2025-03-08T20:18:33.396+0000] {processor.py:186} INFO - Started process (PID=209) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:33.397+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:18:33.400+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:33.400+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:34.124+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:18:34.152+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:34.151+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:18:34.173+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:18:34.173+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:18:34.200+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.810 seconds
+[2025-03-08T20:19:04.557+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:04.558+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:19:04.562+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:04.561+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:05.339+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:05.365+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:05.365+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:19:05.386+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:05.386+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:19:05.411+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.861 seconds
+[2025-03-08T20:19:35.840+0000] {processor.py:186} INFO - Started process (PID=225) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:35.841+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:19:35.843+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:35.843+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:36.446+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:19:36.467+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:36.467+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:19:36.487+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:19:36.487+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:19:36.511+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.678 seconds
+[2025-03-08T20:20:06.892+0000] {processor.py:186} INFO - Started process (PID=233) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:06.894+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:20:06.896+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:06.896+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:07.572+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:07.598+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:07.598+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:20:07.621+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:07.620+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:20:07.649+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.763 seconds
+[2025-03-08T20:20:37.855+0000] {processor.py:186} INFO - Started process (PID=241) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:37.856+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:20:37.859+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:37.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:38.556+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:20:38.590+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:38.589+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:20:38.613+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:20:38.613+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:20:38.643+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.795 seconds
+[2025-03-08T20:21:08.977+0000] {processor.py:186} INFO - Started process (PID=249) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:08.979+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:21:08.981+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:08.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:09.671+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:09.694+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:09.694+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:21:09.715+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:09.715+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:21:09.738+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.767 seconds
+[2025-03-08T20:21:40.084+0000] {processor.py:186} INFO - Started process (PID=257) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:40.085+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:21:40.088+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:40.087+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:40.738+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:21:40.771+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:40.771+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:21:40.797+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:21:40.797+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:21:40.837+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.759 seconds
+[2025-03-08T20:22:11.167+0000] {processor.py:186} INFO - Started process (PID=265) to work on /opt/airflow/dags/mainDag.py
+[2025-03-08T20:22:11.168+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mainDag.py for tasks to queue
+[2025-03-08T20:22:11.172+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:22:11.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:22:11.941+0000] {processor.py:925} INFO - DAG(s) 'solar_energy_crops_pipeline' retrieved from /opt/airflow/dags/mainDag.py
+[2025-03-08T20:22:11.970+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:22:11.970+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-08T20:22:11.990+0000] {logging_mixin.py:190} INFO - [2025-03-08T20:22:11.990+0000] {dag.py:4180} INFO - Setting next_dagrun for solar_energy_crops_pipeline to 2025-03-08 00:00:00+00:00, run_after=2025-03-09 00:00:00+00:00
+[2025-03-08T20:22:12.012+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mainDag.py took 0.852 seconds
