@@ -1,49 +1,45 @@
-
 ---
-x-airflow-common:
-  &airflow-common
+x-airflow-common: &airflow-common
   # In order to add custom dependencies or upgrade provider packages you can use your extended image.
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
   # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.10.4}
   build:
-    context: .  # Set the build context to the parent directory
-    dockerfile: docker/airflow.dockerfile  # Specify the path to the Dockerfile
+    context: . # Set the build context to the parent directory
+    dockerfile: docker/airflow.dockerfile # Specify the path to the Dockerfile
 
-  environment:
-    &airflow-common-env
+  environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW_CONN_SPARK_DEFAULT: spark://spark-master:7077
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: ''
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
+    AIRFLOW__CORE__FERNET_KEY: ""
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
     # yamllint enable rule:line-length
-    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     # The following line can be used to set a custom config file, stored in the local config folder
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
-    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/service-account.json
+    # GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/service-account.json
   volumes:
     - ${AIRFLOW_PROJ_DIR}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR}/plugins:/opt/airflow/plugins
     - ${jobs_dir}/jobs:/opt/airflow/jobs
-    - C:/Users/murali/gcp_keys/gcs_key.json:/opt/airflow/service-account.json
+    # - C:/Users/murali/gcp_keys/gcs_key.json:/opt/airflow/service-account.json
     # - ${AIRFLOW_PROJ_DIR:-.}/requirements.txt:/opt/airflow/requirements.txt
   user: "${AIRFLOW_UID:-50000}:0"
-  depends_on:
-    &airflow-common-depends-on
+  depends_on: &airflow-common-depends-on
     redis:
       condition: service_healthy
     postgres:
@@ -52,8 +48,7 @@ x-airflow-common:
     - spark-network
 
 x-spark-image:
-  &spark-image
-  #image: ${SPARK_IMAGE_NAME:-docker.io/bitnami/spark:3.5.1}
+  &spark-image #image: ${SPARK_IMAGE_NAME:-docker.io/bitnami/spark:3.5.1}
   build:
     context: ./docker
     dockerfile: spark.dockerfile
@@ -75,7 +70,7 @@ services:
     restart: always
     networks:
       - spark-network
-  
+
     # Application database (PostgreSQL)
   postgres_app:
     image: postgres:15
@@ -86,7 +81,7 @@ services:
       POSTGRES_PASSWORD: app_password
       POSTGRES_DB: app_db
     ports:
-      - "5435:5432"  # Exposing on a different port
+      - "5435:5432" # Exposing on a different port
     volumes:
       - postgres_app_data:/var/lib/postgresql/data
     networks:
@@ -133,8 +128,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '2'  # Limit to 2 CPU cores
-          memory: 2G  # Limit to 2GB of memory
+          cpus: "2" # Limit to 2 CPU cores
+          memory: 2G # Limit to 2GB of memory
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -159,8 +154,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1'  # Limit to 2 CPU cores
-          memory: 2G  # Limit to 2GB of memory
+          cpus: "1" # Limit to 2 CPU cores
+          memory: 2G # Limit to 2GB of memory
     healthcheck:
       # yamllint disable rule:line-length
       test:
@@ -183,7 +178,6 @@ services:
     networks:
       - spark-network
 
-
   airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash
@@ -192,11 +186,11 @@ services:
     # yamllint enable rule:line-length
     environment:
       <<: *airflow-common-env
-      _AIRFLOW_DB_MIGRATE: 'true'
-      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_DB_MIGRATE: "true"
+      _AIRFLOW_WWW_USER_CREATE: "true"
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
-      _PIP_ADDITIONAL_REQUIREMENTS: ''
+      _PIP_ADDITIONAL_REQUIREMENTS: ""
 
   airflow-cli:
     <<: *airflow-common
@@ -216,17 +210,17 @@ services:
     command: bin/spark-class org.apache.spark.deploy.master.Master
     environment:
       - SPARK_MODE=master
-    
+
     healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8080"]  # Check if the master UI is accessible
+      test: ["CMD", "curl", "--fail", "http://localhost:8080"] # Check if the master UI is accessible
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 30s
 
     ports:
-      - "8082:8080"  # Spark Master Web UI
-      - "7077:7077"  # Spark Master communication port
+      - "8082:8080" # Spark Master Web UI
+      - "7077:7077" # Spark Master communication port
     volumes:
       - ./jobs:/opt/jobs
     networks:
@@ -246,16 +240,16 @@ services:
       - SPARK_SSL_ENABLED=no
     depends_on:
       - spark-master
-    
+
     healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8081"]  # Check if the worker UI is accessible
+      test: ["CMD", "curl", "--fail", "http://localhost:8081"] # Check if the worker UI is accessible
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 30s
 
     ports:
-      - "8081:8081"  # Spark Worker Web UI
+      - "8081:8081" # Spark Worker Web UI
     volumes:
       - ./jobs:/opt/jobs
     networks:
