@@ -46,12 +46,16 @@ x-airflow-common: &airflow-common
       condition: service_healthy
   networks:
     - spark-network
+  extra_hosts:
+      - "metadata.google.internal:169.254.169.254"
 
 x-spark-image:
   &spark-image #image: ${SPARK_IMAGE_NAME:-docker.io/bitnami/spark:3.5.1}
   build:
     context: ./docker
     dockerfile: spark.dockerfile
+  extra_hosts:
+      - "metadata.google.internal:169.254.169.254"
 
 services:
   postgres:

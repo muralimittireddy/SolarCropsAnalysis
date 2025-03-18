@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from datetime import datetime, timedelta
-# from extract import extract_data
+from extract import extract_data
 
 
 default_args = {
@@ -20,11 +20,11 @@ dag = DAG(
     catchup=False
 )
 
-# extract_task = PythonOperator(
-#     task_id='extract_data',
-#     python_callable=extract_data,
-#     dag=dag
-# )
+extract_task = PythonOperator(
+    task_id='extract_data',
+    python_callable=extract_data,
+    dag=dag
+)
 
 start = PythonOperator(
     task_id="start",
@@ -36,16 +36,24 @@ first_task= SparkSubmitOperator(
     task_id="first_task",
     application="jobs/Script1.py",  # Path to your Spark script
     conn_id="spark_mm",  # Spark connection ID
+    conf={"spark.master": "spark://spark-master:7077"},
     dag=dag
 )
 
 # Define the Spark job task
-# submit_spark_job = SparkSubmitOperator(
-#     task_id="submit_spark_job",
-#     application="jobs/transform.py",  # Path to your Spark script
-#     conn_id="spark_mm",  # Spark connection ID
-#     dag=dag
-# )
+submit_spark_job = SparkSubmitOperator(
+    task_id="submit_spark_job",
+    application="jobs/transform.py",  # Path to your Spark script
+    conn_id="spark_mm",  # Spark connection ID
+    conf={"spark.master": "spark://spark-master:7077"},
+    dag=dag
+)
+
+end = PythonOperator(
+    task_id="end",
+    python_callable=lambda: print("Jobs ended"),
+    dag=dag
+)
 
 # transform_task = PythonOperator(
 #     task_id='transform_data',
@@ -61,4 +69,4 @@ first_task= SparkSubmitOperator(
 
 # extract_task 
 
-start >> first_task
+start >> extract_task >> first_task >> submit_spark_job >> end
