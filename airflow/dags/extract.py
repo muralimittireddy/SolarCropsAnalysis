@@ -27,7 +27,7 @@ async def main():
             batch_results = await asyncio.gather(*tasks)  # Runs the tasks for one year
             results.extend(batch_results)
             print("Sleeping for a while to respect API rate limits...")
-            await asyncio.sleep(60)  # Sleep for 60 seconds to respect API rate limits
+            await asyncio.sleep(20)  # Sleep for 60 seconds to respect API rate limits
     return results
 
 async def fetch_data_with_semaphore(session, year, semaphore):
@@ -36,7 +36,7 @@ async def fetch_data_with_semaphore(session, year, semaphore):
 
 
 async def fetch_data(session, year):
-    
+
     url = f"https://archive-api.open-meteo.com/v1/archive?latitude=17.68&longitude=83.21&start_date={year}-01-01&end_date={year}-12-31&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,precipitation_probability,precipitation,rain,pressure_msl,surface_pressure,cloud_cover,wind_speed_10m,wind_direction_10m,soil_temperature_6cm,soil_temperature_18cm,soil_moisture_0_to_1cm,soil_moisture_3_to_9cm,is_day,sunshine_duration,direct_radiation,diffuse_radiation&daily=sunrise,sunset,daylight_duration&timezone=Asia%2FBangkok"
     try:
         async with session.get(url, timeout=10) as response:
@@ -52,7 +52,7 @@ async def fetch_data(session, year):
 def fetch_all_data():
     """Fetch data from API"""
     # Run the async function
-    data = asyncio.run(main())  
+    data = asyncio.run(main())
     print("Done fetching all years!")
     return data
 
@@ -72,11 +72,11 @@ def save_to_gcs(df, file_name):
     try:
         # Convert DataFrame to PyArrow Table
         table = pa.Table.from_pandas(df)
-        
+
         # Save as Parquet file locally
         local_file_path = f"/tmp/{file_name}.parquet"
         pq.write_table(table, local_file_path)
-        
+
         # Upload to GCS
         bucket = storage_client.bucket(GCS_BUCKET_NAME)
         blob = bucket.blob(f"{file_name}.parquet")
@@ -106,7 +106,7 @@ def extract_data():
         daily_data = entry["daily"]
         # Extract year from the first timestamp
         first_timestamp = hourly_data["time"][0]  # Example: "2010-01-01T00:00"
-        year = first_timestamp.split("-")[0] 
+        year = first_timestamp.split("-")[0]
         # Hourly DataFrame
         df_hourly = pd.DataFrame(hourly_data)
         df_hourly["Time_Units"] = hourly_units["time"]
@@ -141,4 +141,3 @@ def extract_data():
     # print(df_hourly)
     # print("\nDaily Data:")
     # print(df_daily)
-

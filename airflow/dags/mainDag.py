@@ -32,20 +32,18 @@ start = PythonOperator(
     dag=dag
 )
 
-first_task= SparkSubmitOperator(
-    task_id="first_task",
-    application="jobs/Script1.py",  # Path to your Spark script
-    conn_id="spark_mm",  # Spark connection ID
-    conf={"spark.master": "spark://spark-master:7077"},
-    dag=dag
-)
 
 # Define the Spark job task
 submit_spark_job = SparkSubmitOperator(
     task_id="submit_spark_job",
     application="jobs/transform.py",  # Path to your Spark script
     conn_id="spark_mm",  # Spark connection ID
-    conf={"spark.master": "spark://spark-master:7077"},
+    conf={"spark.master": "spark://spark-master:7077",
+         "spark.hadoop.google.cloud.auth.service.account.enable": "true",
+        "spark.hadoop.fs.gs.impl": "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem",
+        "spark.hadoop.fs.AbstractFileSystem.gs.impl": "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS",
+        },
+    jars="/opt/bitnami/spark/jars/postgresql-42.2.23.jar,/opt/bitnami/spark/jars/spark-3.5-bigquery-0.36.5.jar,/opt/bitnami/spark/jars/gcs-connector-hadoop3-latest.jar",
     dag=dag
 )
 
@@ -55,18 +53,4 @@ end = PythonOperator(
     dag=dag
 )
 
-# transform_task = PythonOperator(
-#     task_id='transform_data',
-#     python_callable=transform_data,
-#     dag=dag
-# )
-
-# load_task = PythonOperator(
-#     task_id='load_data',
-#     python_callable=load_data,
-#     dag=dag
-# )
-
-# extract_task 
-
-start >> extract_task >> first_task >> submit_spark_job >> end
+start >> extract_task >> submit_spark_job >> end

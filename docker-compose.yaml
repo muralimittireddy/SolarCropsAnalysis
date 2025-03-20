@@ -47,7 +47,7 @@ x-airflow-common: &airflow-common
   networks:
     - spark-network
   extra_hosts:
-      - "metadata.google.internal:169.254.169.254"
+    - "metadata.google.internal:169.254.169.254"
 
 x-spark-image:
   &spark-image #image: ${SPARK_IMAGE_NAME:-docker.io/bitnami/spark:3.5.1}
@@ -55,7 +55,7 @@ x-spark-image:
     context: ./docker
     dockerfile: spark.dockerfile
   extra_hosts:
-      - "metadata.google.internal:169.254.169.254"
+    - "metadata.google.internal:169.254.169.254"
 
 services:
   postgres:
@@ -158,8 +158,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1" # Limit to 2 CPU cores
-          memory: 2G # Limit to 2GB of memory
+          cpus: "3" # Limit to 2 CPU cores
+          memory: 5G # Limit to 2GB of memory
     healthcheck:
       # yamllint disable rule:line-length
       test:
@@ -277,6 +277,8 @@ services:
       - "7077:7077" # Spark Master communication port
     volumes:
       - ./jobs:/opt/jobs
+      - ./data:/opt/bitnami/spark/data # Persistent storage
+      - ./conf:/opt/bitnami/spark/conf # Custom configpt/jobs
     networks:
       - spark-network
 
@@ -306,6 +308,8 @@ services:
       - "8081:8081" # Spark Worker Web UI
     volumes:
       - ./jobs:/opt/jobs
+      - ./data:/opt/bitnami/spark/data # Persistent storage
+      - ./conf:/opt/bitnami/spark/conf # Custom config
     networks:
       - spark-network
 

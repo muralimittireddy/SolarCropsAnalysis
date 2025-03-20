@@ -1,17 +1,31 @@
 import logging
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, date_format, mean, sum as _sum, stddev, when, min as _min, max as _max
+from pyspark.sql.functions import (
+    col, date_format, mean, sum as _sum, stddev, when, min as _min, max as _max, lit
+)
 from pyspark.sql.types import DateType
+from pyspark.sql.functions import to_timestamp
 
+# Initialize Spark session
 try:
-    # Initialize Spark session
     spark = SparkSession.builder \
         .appName("WeatherDataTransformation") \
-        .config("spark.jars.packages","org.postgresql:postgresql:42.2.5") \
+    .config("spark.hadoop.fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem") \
+    .config("spark.hadoop.fs.AbstractFileSystem.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS") \
+    .config("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
+        .config("spark.jars", "/opt/bitnami/spark/jars/postgresql-42.2.23.jar,/opt/bitnami/spark/jars/spark-3.5-bigquery-0.36.5.jar,/opt/bitnami/spark/jars/gcs-connector-hadoop3-latest.jar") \
         .getOrCreate()
 except Exception as e:
     logging.error(f"Error initializing Spark session: {e}")
     exit(1)
+
+# Configure Spark to use GCS for BigQuery
+spark.conf.set("spark.hadoop.fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
+spark.conf.set("spark.hadoop.fs.gs.auth.service.account.enable", "true")
+spark.conf.set("fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
+spark.conf.set("fs.AbstractFileSystem.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS")
+
+
 
 # PostgreSQL Connection
 postgres_url = "jdbc:postgresql://postgres_app/app_db"
@@ -20,19 +34,21 @@ properties = {
     "password": "app_password",
     "driver": "org.postgresql.Driver"
 }
-try:
+
 # Load Data
+try:
     hourly_weather = spark.read.jdbc(postgres_url, "hourlyData", properties=properties)
     daily_weather = spark.read.jdbc(postgres_url, "dailyData", properties=properties)
-    # crop_data = spark.read.jdbc(postgres_url, "crop_data", properties=properties)
 except Exception as e:
     logging.error(f"Error loading data from PostgreSQL: {e}")
     spark.stop()
     exit(1)
 
-# hourly to daily transformation
-hourly_weather = hourly_weather.withColumn("date", col("timestamp").cast(DateType()))
+# Convert time column to Date
+hourly_weather = hourly_weather.withColumn("time", to_timestamp(col("time"), "yyyy-MM-dd'T'HH:mm")) \
+                               .withColumn("date", col("time").cast(DateType()))
 
+# Aggregate Hourly Data to Daily
 daily_agg = hourly_weather.groupBy("date").agg(
     mean("temperature_2m").alias("temperature_2m"),
     _max("temperature_2m").alias("max_temperature"),
@@ -51,32 +67,36 @@ daily_agg = daily_agg.withColumn("direct_radiation", col("direct_radiation") * 0
                      .withColumn("diffuse_radiation", col("diffuse_radiation") * 0.0864) \
                      .withColumn("precipitation", col("precipitation") / 10)
 
-# Derived features
-# Compute Growing Degree Days (GDD)
+# Derived Features
 daily_agg = daily_agg.withColumn("GDD", ((col("max_temperature") + col("min_temperature")) / 2 - 10)) \
                      .withColumn("GDD", when(col("GDD") < 0, 0).otherwise(col("GDD")))
 
-# Heat Stress Days (above 35°C)
 daily_agg = daily_agg.withColumn("heat_stress", when(col("temperature_2m") > 35, 1).otherwise(0))
 
-# Soil Moisture Index
+# Compute Min/Max values for indices
 soil_temp_min = daily_agg.agg(_min("soil_temperature_6cm")).collect()[0][0]
 soil_temp_max = daily_agg.agg(_max("soil_temperature_6cm")).collect()[0][0]
-daily_agg = daily_agg.withColumn("soil_moisture_index", (col("soil_temperature_6cm") - soil_temp_min) / (soil_temp_max - soil_temp_min))
-
-
-# Drought Index
 precip_min = daily_agg.agg(_min("precipitation")).collect()[0][0]
 precip_max = daily_agg.agg(_max("precipitation")).collect()[0][0]
-daily_agg = daily_agg.withColumn("drought_index", (col("precipitation") - precip_min) / (precip_max - precip_min))
+
+# Avoid division by zero
+soil_temp_range = soil_temp_max - soil_temp_min if soil_temp_max != soil_temp_min else 1
+precip_range = precip_max - precip_min if precip_max != precip_min else 1
+
+# Apply Indices
+daily_agg = daily_agg.withColumn("soil_moisture_index", (col("soil_temperature_6cm") - lit(soil_temp_min)) / lit(soil_temp_range)) \
+                     .withColumn("drought_index", (col("precipitation") - lit(precip_min)) / lit(precip_range))
 
 # Total Solar Radiation
 daily_agg = daily_agg.withColumn("total_solar_radiation", col("direct_radiation") + col("diffuse_radiation"))
 
-# Radiation Efficiency
-daily_agg = daily_agg.withColumn("radiation_efficiency", col("total_solar_radiation") / col("sunshine_duration"))
+# Radiation Efficiency (Handle division by zero)
+daily_agg = daily_agg.withColumn("radiation_efficiency",
+    when(col("sunshine_duration") > 0, col("total_solar_radiation") / col("sunshine_duration"))
+    .otherwise(lit(0))
+)
 
-# Extract month and year
+# Extract Month and Year
 daily_agg = daily_agg.withColumn("month", date_format(col("date"), "M")) \
                      .withColumn("year", date_format(col("date"), "yyyy"))
 
@@ -93,41 +113,32 @@ seasonal_agg = daily_agg.filter((col("month") >= 6) & (col("month") <= 11)).grou
     _sum("GDD").alias("GDD"),
     _sum("precipitation").alias("precipitation"),
     _sum("sunshine_duration").alias("sunshine_duration"),
-    _sum("direct_radiation").alias("direct_radiation")
+    _sum("direct_radiation").alias("direct_radiation"),
+    _sum("diffuse_radiation").alias("diffuse_radiation")
 )
 
 # Compute Rainfall Variability Index
 precip_mean = seasonal_agg.agg(mean("precipitation")).collect()[0][0]
 precip_std = seasonal_agg.agg(stddev("precipitation")).collect()[0][0]
-seasonal_agg = seasonal_agg.withColumn("rainfall_variability", precip_std / precip_mean)
+seasonal_agg = seasonal_agg.withColumn("rainfall_variability",
+    when(lit(precip_mean) > 0, lit(precip_std) / lit(precip_mean))
+    .otherwise(lit(0))
+)
 
 # Seasonal Drought Index
 seasonal_precip_min = seasonal_agg.agg(_min("precipitation")).collect()[0][0]
 seasonal_precip_max = seasonal_agg.agg(_max("precipitation")).collect()[0][0]
-seasonal_agg = seasonal_agg.withColumn("drought_index", (col("precipitation") - seasonal_precip_min) / (seasonal_precip_max - seasonal_precip_min))
+seasonal_precip_range = seasonal_precip_max - seasonal_precip_min if seasonal_precip_max != seasonal_precip_min else 1
 
-# Total Solar Radiation and Radiation Efficiency
-seasonal_agg = seasonal_agg.withColumn("total_solar_radiation", col("direct_radiation") + col("diffuse_radiation")) \
-                           .withColumn("radiation_efficiency", col("total_solar_radiation") / col("sunshine_duration"))
+seasonal_agg = seasonal_agg.withColumn("drought_index", (col("precipitation") - lit(seasonal_precip_min)) / lit(seasonal_precip_range))
 
-# Write DataFrames to BigQuery (if needed)
-daily_agg.write.format("bigquery") \
-    .option("table", "SolarCropsAnalysis.weatherData_SolarCropsAnalysis.Daily_WeatherData") \
-    .option("temporaryGcsBucket", "solar-crops-analysis-gcs-bucket") \
-    .mode("overwrite") \
-    .save()
-
-monthly_agg.write.format("bigquery") \
-    .option("table", "SolarCropsAnalysis.weatherData_SolarCropsAnalysis.Monthly_WeatherData") \
-    .option("temporaryGcsBucket", "solar-crops-analysis-gcs-bucket") \
-    .mode("overwrite") \
-    .save()
-
-seasonal_agg.write.format("bigquery") \
-    .option("table", "SolarCropsAnalysis.weatherData_SolarCropsAnalysis.Seasonal_WeatherData") \
-    .option("temporaryGcsBucket", "solar-crops-analysis-gcs-bucket") \
-    .mode("overwrite") \
-    .save()
+# Save to BigQuery
+for df, table in [(daily_agg, "Daily_WeatherData"), (monthly_agg, "Monthly_WeatherData"), (seasonal_agg, "Seasonal_WeatherData")]:
+    df.write.format("bigquery") \
+        .option("table", f"solarcropsanalysis.weatherData_SolarCropsAnalysis.{table}") \
+        .option("temporaryGcsBucket", "solar-crops-analysis-archival-data") \
+        .mode("overwrite") \
+        .save()
 
 # Stop Spark session
 spark.stop()
