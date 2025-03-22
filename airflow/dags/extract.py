@@ -27,7 +27,7 @@ async def main():
             batch_results = await asyncio.gather(*tasks)  # Runs the tasks for one year
             results.extend(batch_results)
             print("Sleeping for a while to respect API rate limits...")
-            await asyncio.sleep(20)  # Sleep for 60 seconds to respect API rate limits
+            await asyncio.sleep(60)  # Sleep for 60 seconds to respect API rate limits
     return results
 
 async def fetch_data_with_semaphore(session, year, semaphore):
