@@ -12,7 +12,7 @@ import asyncio  # Async programming library
 
 POSTGRES_CONN = "postgresql://app_user:app_password@postgres_app:5432/app_db"
 # Google Cloud Storage settings
-GCS_BUCKET_NAME = "solar-crops-analysis-archival-data"  # Replace with your GCS bucket name
+GCS_BUCKET_NAME = "solar-crops-analysis-archival-data-1"  # Replace with your GCS bucket name
 LOCAL_STORAGE_PATH = "/tmp/"  # Temporary local storage before uploading
 # Initialize Google Cloud Storage client
 storage_client = storage.Client()

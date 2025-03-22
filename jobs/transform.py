@@ -135,8 +135,8 @@ seasonal_agg = seasonal_agg.withColumn("drought_index", (col("precipitation") - 
 # Save to BigQuery
 for df, table in [(daily_agg, "Daily_WeatherData"), (monthly_agg, "Monthly_WeatherData"), (seasonal_agg, "Seasonal_WeatherData")]:
     df.write.format("bigquery") \
-        .option("table", f"solarcropsanalysis.weatherData_SolarCropsAnalysis.{table}") \
-        .option("temporaryGcsBucket", "solar-crops-analysis-archival-data") \
+        .option("table", f"solarcropsanalysis-454507.weatherData_SolarCropsAnalysis_1.{table}") \
+        .option("temporaryGcsBucket", "solar-crops-analysis-archival-data-1") \
         .mode("overwrite") \
         .save()
 
