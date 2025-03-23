@@ -37,8 +37,8 @@ properties = {
 
 # Load Data
 try:
-    hourly_weather = spark.read.jdbc(postgres_url, '"hourlyData"', properties=properties)
-    daily_weather = spark.read.jdbc(postgres_url, '"dailyData"', properties=properties)
+    hourly_weather = spark.read.jdbc(postgres_url, '"hourly_data"', properties=properties)
+    daily_weather = spark.read.jdbc(postgres_url, '"daily_data"', properties=properties)
 except Exception as e:
     logging.error(f"Error loading data from PostgreSQL: {e}")
     spark.stop()

@@ -6,14 +6,15 @@ from google.cloud import storage
 import os
 from sqlalchemy import create_engine
 # import yaml
-
+import tempfile
 import aiohttp  # Async HTTP library
 import asyncio  # Async programming library
 
 POSTGRES_CONN = "postgresql://app_user:app_password@postgres_app:5432/app_db"
+engine = create_engine(POSTGRES_CONN)
 # Google Cloud Storage settings
 GCS_BUCKET_NAME = "solar-crops-analysis-archival-data-1"  # Replace with your GCS bucket name
-LOCAL_STORAGE_PATH = "/tmp/"  # Temporary local storage before uploading
+LOCAL_STORAGE_PATH = tempfile.gettempdir()  # Temporary local storage before uploading
 # Initialize Google Cloud Storage client
 storage_client = storage.Client()
 
@@ -59,7 +60,6 @@ def fetch_all_data():
 def save_to_postgres(df,table_name):
     """Save extracted data to PostgreSQL running in Docker"""
     try:
-        engine = create_engine(POSTGRES_CONN)
         with engine.connect() as conn:
             df.to_sql(table_name, con=conn, if_exists="append", index=False)
         print("Data saved to PostgreSQL table: solar_crops_raw")
@@ -74,7 +74,7 @@ def save_to_gcs(df, file_name):
         table = pa.Table.from_pandas(df)
 
         # Save as Parquet file locally
-        local_file_path = f"/tmp/{file_name}.parquet"
+        local_file_path = f"{LOCAL_STORAGE_PATH}/{file_name}.parquet"
         pq.write_table(table, local_file_path)
 
         # Upload to GCS
@@ -100,6 +100,12 @@ def extract_data():
     df_daily_list = []
 
     for entry in data:
+        if not entry:
+            print("Skipping empty response...")
+            continue
+        if "hourly" not in entry or "daily" not in entry:
+            print(f"Skipping year due to missing data: {entry}")
+            continue
         hourly_units = entry["hourly_units"]
         hourly_data = entry["hourly"]
         daily_units = entry["daily_units"]
@@ -126,8 +132,8 @@ def extract_data():
         save_to_gcs(df_hourly, f"hourlyData{year}")
         save_to_gcs(df_daily, f"dailyData{year}")
 
-        save_to_postgres(df_hourly, f"hourlyData")
-        save_to_postgres(df_daily, f"dailyData")
+        save_to_postgres(df_hourly, f"hourly_data")
+        save_to_postgres(df_daily, f"daily_data")
 
     # Combine into single DataFrame
     # df_hourly = pd.concat(df_hourly_list, ignore_index=True)
