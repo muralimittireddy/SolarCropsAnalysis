@@ -1,0 +1,110 @@
+[2025-03-26T18:08:16.344+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-26T18:08:16.396+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-23T00:00:00+00:00 [queued]>
+[2025-03-26T18:08:16.416+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-23T00:00:00+00:00 [queued]>
+[2025-03-26T18:08:16.417+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-26T18:08:16.444+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-23 00:00:00+00:00
+[2025-03-26T18:08:16.455+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-26T18:08:16.457+0000] {standard_task_runner.py:72} INFO - Started process 69 to run task
+[2025-03-26T18:08:16.458+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'solar_energy_crops_pipeline', 'extract_data', 'scheduled__2025-03-23T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/mainDag.py', '--cfg-path', '/tmp/tmps9ee3mtb']
+[2025-03-26T18:08:16.460+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask extract_data
+[2025-03-26T18:08:16.575+0000] {task_command.py:467} INFO - Running <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-23T00:00:00+00:00 [running]> on host 8f4583a99d9d
+[2025-03-26T18:08:16.735+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='solar_energy_crops_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-23T00:00:00+00:00'
+[2025-03-26T18:08:16.740+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-26T18:08:16.761+0000] {logging_mixin.py:190} INFO - Extracting data from API...
+[2025-03-26T18:08:16.763+0000] {logging_mixin.py:190} INFO - Fetching data for year 1967
+[2025-03-26T18:08:20.295+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:09:20.339+0000] {logging_mixin.py:190} INFO - Fetching data for year 1968
+[2025-03-26T18:09:22.487+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:10:22.532+0000] {logging_mixin.py:190} INFO - Fetching data for year 1969
+[2025-03-26T18:10:24.871+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:11:24.914+0000] {logging_mixin.py:190} INFO - Done fetching all years!
+[2025-03-26T18:11:24.914+0000] {logging_mixin.py:190} INFO - Extraction completed
+[2025-03-26T18:11:25.237+0000] {logging_mixin.py:190} INFO - File hourlyData1967.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:25.238+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/hourlyData1967.parquet'
+[2025-03-26T18:11:25.302+0000] {logging_mixin.py:190} INFO - File dailyData1967.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:25.302+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/dailyData1967.parquet'
+[2025-03-26T18:11:27.121+0000] {logging_mixin.py:190} INFO - Error saving data to PostgreSQL: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(hourly_data, 2200) already exists.
+
+[SQL: 
+CREATE TABLE hourly_data (
+	time TEXT, 
+	temperature_2m FLOAT(53), 
+	relative_humidity_2m BIGINT, 
+	dew_point_2m FLOAT(53), 
+	precipitation_probability TEXT, 
+	precipitation FLOAT(53), 
+	rain FLOAT(53), 
+	pressure_msl FLOAT(53), 
+	surface_pressure FLOAT(53), 
+	cloud_cover BIGINT, 
+	wind_speed_10m FLOAT(53), 
+	wind_direction_10m BIGINT, 
+	soil_temperature_6cm TEXT, 
+	soil_temperature_18cm TEXT, 
+	soil_moisture_0_to_1cm TEXT, 
+	soil_moisture_3_to_9cm TEXT, 
+	is_day BIGINT, 
+	sunshine_duration FLOAT(53), 
+	direct_radiation FLOAT(53), 
+	diffuse_radiation FLOAT(53), 
+	"Time_Units" TEXT, 
+	temperature_2m_unit TEXT, 
+	relative_humidity_2m_unit TEXT, 
+	dew_point_2m_unit TEXT, 
+	precipitation_probability_unit TEXT, 
+	precipitation_unit TEXT, 
+	rain_unit TEXT, 
+	pressure_msl_unit TEXT, 
+	surface_pressure_unit TEXT, 
+	cloud_cover_unit TEXT, 
+	wind_speed_10m_unit TEXT, 
+	wind_direction_10m_unit TEXT, 
+	soil_temperature_6cm_unit TEXT, 
+	soil_temperature_18cm_unit TEXT, 
+	soil_moisture_0_to_1cm_unit TEXT, 
+	soil_moisture_3_to_9cm_unit TEXT, 
+	is_day_unit TEXT, 
+	sunshine_duration_unit TEXT, 
+	direct_radiation_unit TEXT, 
+	diffuse_radiation_unit TEXT
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-03-26T18:11:27.165+0000] {logging_mixin.py:190} INFO - Error saving data to PostgreSQL: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(daily_data, 2200) already exists.
+
+[SQL: 
+CREATE TABLE daily_data (
+	time TEXT, 
+	sunrise TEXT, 
+	sunset TEXT, 
+	daylight_duration FLOAT(53), 
+	"Time_Units" TEXT, 
+	sunrise_unit TEXT, 
+	sunset_unit TEXT, 
+	daylight_duration_unit TEXT
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-03-26T18:11:27.373+0000] {logging_mixin.py:190} INFO - File hourlyData1968.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:27.373+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/hourlyData1968.parquet'
+[2025-03-26T18:11:27.430+0000] {logging_mixin.py:190} INFO - File dailyData1968.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:27.431+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/dailyData1968.parquet'
+[2025-03-26T18:11:29.402+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:29.428+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:29.518+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/hourlyData1969.parquet'
+[2025-03-26T18:11:29.575+0000] {logging_mixin.py:190} INFO - File dailyData1969.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:29.576+0000] {logging_mixin.py:190} INFO - Error saving data to GCS: [Errno 2] No such file or directory: '/opt/***/temp_storage/dailyData1969.parquet'
+[2025-03-26T18:11:32.158+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:32.196+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:32.215+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-26T18:11:32.243+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-26T18:11:32.244+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-23T00:00:00+00:00, execution_date=20250323T000000, start_date=20250326T180816, end_date=20250326T181132
+[2025-03-26T18:11:32.341+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-26T18:11:32.397+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-26T18:11:32.399+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

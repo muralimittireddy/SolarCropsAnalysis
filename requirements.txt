@@ -7,4 +7,3 @@ aiohttp
 apache-airflow
 google-cloud-bigquery
 apache-airflow-providers-apache-spark
-tempfile

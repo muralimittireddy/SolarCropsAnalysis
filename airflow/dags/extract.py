@@ -14,15 +14,19 @@ POSTGRES_CONN = "postgresql://app_user:app_password@postgres_app:5432/app_db"
 engine = create_engine(POSTGRES_CONN)
 # Google Cloud Storage settings
 GCS_BUCKET_NAME = "solar-crops-analysis-archival-data-1"  # Replace with your GCS bucket name
-LOCAL_STORAGE_PATH = tempfile.gettempdir()  # Temporary local storage before uploading
+# Define a local storage path using the OS module
+LOCAL_STORAGE_PATH = os.path.join(os.getcwd(), "temp_storage")
+
+# Ensure the directory exists
+os.makedirs(LOCAL_STORAGE_PATH, exist_ok=True) 
 # Initialize Google Cloud Storage client
 storage_client = storage.Client()
 
 async def main():
-    semaphore = asyncio.Semaphore(10)  # Limit the number of concurrent requests
+    semaphore = asyncio.Semaphore(1)  # Limit the number of concurrent requests
     async with aiohttp.ClientSession() as session:  # Creates a session for all requests
         results = []
-        for i in range(1967, 2017+1):  # Process one year at a time
+        for i in range(1967, 1969+1):  # Process one year at a time
             tasks = [fetch_data_with_semaphore(session, year, semaphore) for year in range(i, i + 1)]
             print(f"Fetching data for year {i}")
             batch_results = await asyncio.gather(*tasks)  # Runs the tasks for one year
@@ -36,19 +40,31 @@ async def fetch_data_with_semaphore(session, year, semaphore):
         return await fetch_data(session,year)
 
 
-async def fetch_data(session, year):
+async def fetch_data(session, year,retries=5):
 
     url = f"https://archive-api.open-meteo.com/v1/archive?latitude=17.68&longitude=83.21&start_date={year}-01-01&end_date={year}-12-31&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,precipitation_probability,precipitation,rain,pressure_msl,surface_pressure,cloud_cover,wind_speed_10m,wind_direction_10m,soil_temperature_6cm,soil_temperature_18cm,soil_moisture_0_to_1cm,soil_moisture_3_to_9cm,is_day,sunshine_duration,direct_radiation,diffuse_radiation&daily=sunrise,sunset,daylight_duration&timezone=Asia%2FBangkok"
-    try:
-        async with session.get(url, timeout=10) as response:
-            if response.status == 200:
-                return await response.json()
-            else:
-                print(f"Failed to fetch data for {year}: {response.status}")
-                return None
-    except Exception as e:
-        print(f"Error fetching data for {year}: {e}")
-        return None
+    delay= 20
+    for attempt in range(retries):
+        try:
+            async with session.get(url, timeout=10) as response:
+                if response.status == 200:
+                    return await response.json()
+                elif response.status == 429:  # Too many requests
+                    retry_after = int(response.headers.get("Retry-After", delay))  # Use API header if available
+                    print(f"Rate limit exceeded for {year}. Retrying in {retry_after} seconds...")
+                    await asyncio.sleep(retry_after)
+                else:
+                    print(f"Failed to fetch data for {year}: {response.status}")
+                    return None
+        except Exception as e:
+            print(f"Error fetching data for {year}: {e}")
+
+        print(f"Retrying {year} in {delay} seconds...")
+        await asyncio.sleep(delay)
+        delay *= 2  # Exponential backoff
+
+    print(f"Giving up on {year} after {retries} attempts.")
+    return None
 
 def fetch_all_data():
     """Fetch data from API"""
@@ -74,7 +90,7 @@ def save_to_gcs(df, file_name):
         table = pa.Table.from_pandas(df)
 
         # Save as Parquet file locally
-        local_file_path = f"{LOCAL_STORAGE_PATH}/{file_name}.parquet"
+        local_file_path = os.path.join(LOCAL_STORAGE_PATH, f"{file_name}.parquet")
         pq.write_table(table, local_file_path)
 
         # Upload to GCS

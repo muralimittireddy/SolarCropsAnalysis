@@ -1,0 +1,41 @@
+[2025-03-26T18:08:16.712+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-26T18:08:16.758+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-25T00:00:00+00:00 [queued]>
+[2025-03-26T18:08:16.772+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-25T00:00:00+00:00 [queued]>
+[2025-03-26T18:08:16.773+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-26T18:08:16.792+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-25 00:00:00+00:00
+[2025-03-26T18:08:16.801+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=67) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-26T18:08:16.804+0000] {standard_task_runner.py:72} INFO - Started process 72 to run task
+[2025-03-26T18:08:16.804+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'solar_energy_crops_pipeline', 'extract_data', 'scheduled__2025-03-25T00:00:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/mainDag.py', '--cfg-path', '/tmp/tmpkugrqnkn']
+[2025-03-26T18:08:16.806+0000] {standard_task_runner.py:105} INFO - Job 23: Subtask extract_data
+[2025-03-26T18:08:16.904+0000] {task_command.py:467} INFO - Running <TaskInstance: solar_energy_crops_pipeline.extract_data scheduled__2025-03-25T00:00:00+00:00 [running]> on host 8f4583a99d9d
+[2025-03-26T18:08:17.060+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='solar_energy_crops_pipeline' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-25T00:00:00+00:00'
+[2025-03-26T18:08:17.064+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-26T18:08:17.083+0000] {logging_mixin.py:190} INFO - Extracting data from API...
+[2025-03-26T18:08:17.086+0000] {logging_mixin.py:190} INFO - Fetching data for year 1967
+[2025-03-26T18:08:20.299+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:09:20.310+0000] {logging_mixin.py:190} INFO - Fetching data for year 1968
+[2025-03-26T18:09:22.487+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:10:22.532+0000] {logging_mixin.py:190} INFO - Fetching data for year 1969
+[2025-03-26T18:10:24.872+0000] {logging_mixin.py:190} INFO - Sleeping for a while to respect API rate limits...
+[2025-03-26T18:11:24.916+0000] {logging_mixin.py:190} INFO - Done fetching all years!
+[2025-03-26T18:11:24.917+0000] {logging_mixin.py:190} INFO - Extraction completed
+[2025-03-26T18:11:25.193+0000] {logging_mixin.py:190} INFO - File hourlyData1967.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:25.246+0000] {logging_mixin.py:190} INFO - File dailyData1967.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:27.120+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:27.164+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:27.336+0000] {logging_mixin.py:190} INFO - File hourlyData1968.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:27.383+0000] {logging_mixin.py:190} INFO - File dailyData1968.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:29.327+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:29.364+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:29.506+0000] {logging_mixin.py:190} INFO - File hourlyData1969.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:29.559+0000] {logging_mixin.py:190} INFO - File dailyData1969.parquet uploaded to GCS bucket solar-crops-analysis-archival-data-1
+[2025-03-26T18:11:31.970+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:32.003+0000] {logging_mixin.py:190} INFO - Data saved to PostgreSQL table: solar_crops_raw
+[2025-03-26T18:11:32.022+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-26T18:11:32.051+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-26T18:11:32.052+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=solar_energy_crops_pipeline, task_id=extract_data, run_id=scheduled__2025-03-25T00:00:00+00:00, execution_date=20250325T000000, start_date=20250326T180816, end_date=20250326T181132
+[2025-03-26T18:11:32.169+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-26T18:11:32.215+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-26T18:11:32.217+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

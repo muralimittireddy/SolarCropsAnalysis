@@ -17,7 +17,7 @@ curl -o /opt/bitnami/spark/jars/gcs-connector-hadoop3-latest.jar \
 
 USER airflow
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-
+RUN pip install --upgrade pip
 
 RUN pip uninstall -y apache-airflow apache-airflow-providers-openlineage && \
 pip cache purge
